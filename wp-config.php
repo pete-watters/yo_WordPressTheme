@@ -21,13 +21,13 @@ if (file_exists(dirname(__FILE__) . '/local-config.php')) {
 
 // Global DB config
 if (!defined('DB_NAME')) {
-	define('DB_NAME', 'yo_wordpress');
+	define('DB_NAME', 'yo_wp');
 }
 if (!defined('DB_USER')) {
-	define('DB_USER', 'yo_wordpress');
+	define('DB_USER', 'yo_wp');
 }
 if (!defined('DB_PASSWORD')) {
-	define('DB_PASSWORD', 'yo_wordpress');
+	define('DB_PASSWORD', 'yo_wp');
 }
 if (!defined('DB_HOST')) {
 	define('DB_HOST', 'localhost');
@@ -52,14 +52,14 @@ if (!defined('DB_COLLATE')) {
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '(Ir41ACIABRz#O6QKTNa@B7046f<|,rN92 tS49{e5g@BP@2s9:?+_=`v%Kv5P/Y');
-define('SECURE_AUTH_KEY',  'tCG*EN@Kg|ru)T1fh;H2f,n ,f`:<Fv`_#mc.u1p=^N-^7GrK! |yLL== :08sk{');
-define('LOGGED_IN_KEY',    'EuENz[}z$Z5OB=roGG}}91a s)G[gM@c)jQ-dy4qo5U.>-Ra4NzM8Znx#&{`*8r`');
-define('NONCE_KEY',        'Z+M9,F!5XTE-%[e!1dPhxZC!^z.3U:{*4Lv2M&,#9Q/#)sY9%8w @@**4@;*Ij9C');
-define('AUTH_SALT',        'h[#kB=%t48YwFr@Sw=T>][?Vdln-g|wloUL/|IrMEG}o-ln*QuN.=0;({aRXRxZ{');
-define('SECURE_AUTH_SALT', ' y4+5Mfrvgal2~O75?` 3vr>}1k3Sno9^%&G`3H<j#d>Cn*0N[6b^sxRS!lXZ_c]');
-define('LOGGED_IN_SALT',   '|)PoL~P29%X>nyYbbjb|/u%%E4[wCwRo*;Vr8*y50Zf?$~V?%M.W%{N)N{MLVQs:');
-define('NONCE_SALT',       'r<Qh;r[w:2ouw}`s(k!rm`I-7T<FS!4|.]M|hRwNntyz5)llAZ{!uM1-q9O8Ii[f');
+define('AUTH_KEY',         'd,}/qwd4Bm!2F, 2tML-gBI[9@5)B7 I<Cq/*B?Nc#[).(D`wYtS#GCq.xM{BwbY');
+define('SECURE_AUTH_KEY',  'mIiyfLDRGFSg/PIGEfTP0JDsTQ-Kr8/7a9-hYyZ+~0rNw?-fkp6 Y-HTO?a[<c|5');
+define('LOGGED_IN_KEY',    'XiUII*4QnsO-ENF:+f3L(y(z3?,s7zP!2Uiw<X9WZPq!6/*Sr<dKHrlxGIA|pQ3A');
+define('NONCE_KEY',        'tEFPIxCRi8BTgB3Y!^P4. @U(/.NZ9||>>)L]G+S$Pn*A@.$[^.$llRZbd+JX+Tp');
+define('AUTH_SALT',        '*e@-igSSzyZAGo;yv>fW-tb1DGQ.B]W=41b%<*G2=)j^4<S(pBXWTdvGuY:^ZT.4');
+define('SECURE_AUTH_SALT', 'FOD3+cU(ilT.Ts-,@G]8.Gvp~+RK)~Km|M;H^b<?WwCcQ,u.H@ewvj-ELx+F~C8U');
+define('LOGGED_IN_SALT',   'V_pL,k<,PxDm0Wu7H K)VNWq5E..F7kyc1Zh*VXlq|%U.d7r?`liH50gWfV2N,bD');
+define('NONCE_SALT',       'xuf6aV8xd/(1#:kN7bubOdZ@`,*Sz?qbkz>f)Oy87Vl9tF[*n#O[a5s3y#_C>{~v');
 
 /**#@-*/
 
