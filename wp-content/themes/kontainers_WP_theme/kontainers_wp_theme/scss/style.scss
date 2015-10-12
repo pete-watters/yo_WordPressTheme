@@ -1,0 +1,28 @@
+/*!
+	Theme Name: kontainers_WP_theme
+	Author: Pete Watters, Pete Waldock
+	Version: 1.0
+	Author URI: http://kontainers.co.uk
+	Theme URI: http://kontainers.co.uk/kontainers_wp_theme
+	Tags: 
+	Description: Kontainers custom Wordpress theme
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+//
+//@import "legacy/vendor/normalize";
+//@import "legacy/vendor/bourbon/bourbon";
+//@import "legacy/grid-settings";
+//@import "legacy/base";
+//@import "legacy/typography";
+//@import "legacy/components";
+//@import "legacy/wp-base";
+//@import "legacy/header";
+//@import "legacy/navigation";
+//@import "legacy/content";
+//@import "legacy/post-formats";
+//@import "legacy/footer";
+@import "base";
+@import "bclever";
+@import "non-app";
+@import "testimonials";

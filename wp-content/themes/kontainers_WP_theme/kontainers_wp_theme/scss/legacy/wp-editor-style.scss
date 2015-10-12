@@ -1,0 +1,11 @@
+@import "legacy/vendor/bourbon/bourbon";
+@import "legacy/grid-settings";
+@import "legacy/base";
+@import "legacy/typography";
+
+$content-width: 650px;
+
+html .mceContentBody {
+	font-size: 100%;
+	max-width: $content-width;
+}
