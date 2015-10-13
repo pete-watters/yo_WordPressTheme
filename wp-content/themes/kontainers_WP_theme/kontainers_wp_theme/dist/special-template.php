@@ -1,11 +1,15 @@
 <?php
 
 /*
- Template name: Blog Post Layout
+ Template name: Special Template
 */
 
 get_header();
+
 ?>
+
+
+
     <!--  This holds the WP page Content - k-blog-holder class for blog pages only -->
     <div class="non-app k-blog-holder">
 
@@ -23,7 +27,7 @@ get_header();
 
             <!--  conent_holder - positions content -->
             <div class="content_holder">
-                <h1> <a class="blogURL.html">POST Shipping Blog</a></h1>
+                <h1> <a class="blogURL.html">Shipping Blog</a></h1>
 
                 <!--  blog-nav - holds navigation elements scraped from standard WP elements -->
                 <div class="blog-nav">

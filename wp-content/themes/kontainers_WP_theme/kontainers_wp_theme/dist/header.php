@@ -38,11 +38,6 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicons/favicon.ico">
-	<!---->
-<!--	<link rel="stylesheet" type="text/css" href="--><?php //echo get_template_directory_uri(); ?><!--/css/base.css" />-->
-<!--	<link rel="stylesheet" type="text/css" href="--><?php //echo get_template_directory_uri(); ?><!--/css/bclever.css" />-->
-<!--	<link rel="stylesheet" type="text/css" href="--><?php //echo get_template_directory_uri(); ?><!--/css/testimonials.css" />-->
-<!--	<link rel="stylesheet" type="text/css" href="--><?php //echo get_template_directory_uri(); ?><!--/css/non-app.css" />-->
 
 	<?php wp_head(); ?>
 </head>

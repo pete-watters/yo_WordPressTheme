@@ -304,67 +304,67 @@ Footer Testimonials
 
 @media (max-width: 945px) {
   .quotes-wrapper {
-	width: 100%;
-	float: left;
+    width: 100%;
+    float: left;
   }
 
   .quote-animator, .quote-animator.hide-testimonials {
-	height: auto;
-	top: -95px;
-	margin-bottom: -90px;
-	opacity:1;
+    height: auto;
+    top: -95px;
+    margin-bottom: -90px;
+    opacity:1;
   }
   .quote-holder {
-	float: left;
-	clear: both;
-	position: relative;
-	height: auto;
-	width: 100%;
-	border-top: 1px solid rgba(255, 255, 255, 0.4);
-	margin: 10px 0 0 0px;
+    float: left;
+    clear: both;
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 10px 0 0 0px;
   }
   .quote-holder.quote-one, .quote-holder.quote-two, .quote-holder.quote-three, .quote-holder.quote-four, .show-quote.show-quote-one .quote-holder.quote-one, .show-quote.show-quote-two .quote-holder.quote-two, .show-quote.show-quote-three .quote-holder.quote-three, .show-quote.show-quote-four .quote-holder.quote-four {
 
-	-moz-transform: translate(0px, 0px);
-	-o-transform: translate(0px, 0px);
-	-webkit-transform: translate(0px, 0px);
-	transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
   .show-quote .quote-holder, .quote-message-holder, .quote-holder.quote-one, .quote-holder.quote-two, .quote-holder.quote-three, .quote-holder.quote-four {
-	opacity:1;
-	pointer-events:initial;
+    opacity:1;
+    pointer-events:initial;
   }
   .quote-message-holder, .quote-three .quote-message-holder {
-	border:none;
-	height: 100%;
-	width: 100%;
-	padding: 10px;
+    border:none;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
   }
   .quote-message-holder div {
-	position:relative;
-	width: 100%;
-	opacity: 1;
+    position:relative;
+    width: 100%;
+    opacity: 1;
   }
   .quote-message-holder p:after {
-	display:none;
+    display:none;
   }
   .quote-author, .quote-three .quote-author {
-	margin: 7px 10px 10px 25px;
+    margin: 7px 10px 10px 25px;
   }
   .quote-holder.quote-one .quote-logo {
-	background-position: 20px -5px;
-	margin: 18px 0 5px 0px;
+    background-position: 20px -5px;
+    margin: 18px 0 5px 0px;
   }
   .quote-holder.quote-two .quote-logo, .show-quote-two .quote-holder.quote-two .quote-logo {
-	background-position: -127px -10px;
-	margin: 5px 0 -12px 0px;
+    background-position: -127px -10px;
+    margin: 5px 0 -12px 0px;
   }
   .quote-holder.quote-three .quote-logo, .show-quote-three .quote-holder.quote-three .quote-logo {
-	background-position: -300px -10px;
-	margin: 5px 0 -23px 0px;
+    background-position: -300px -10px;
+    margin: 5px 0 -23px 0px;
   }
   .quote-holder.quote-four .quote-logo {
-	margin-left:30px;
-	margin: 15px 0 0 23px;
+    margin-left:30px;
+    margin: 15px 0 0 23px;
   }
 }

@@ -393,11 +393,11 @@ ul li ul {
   -moz-transition: all 0.18s ease-in-out;
   -o-transition: all 0.18s ease-in-out;
   transition: all 0.18s ease-in-out;
-                                  /*-webkit-transform:translate3d(0, 0, 0);
--moz-transform:translate3d(0, 0, 0);
--ms-transform:translate3d(0, 0, 0);
--o-transform:translate3d(0, 0, 0);
-transform:translate3d(0, 0, 0);*/
+                                    /*-webkit-transform:translate3d(0, 0, 0);
+	-moz-transform:translate3d(0, 0, 0);
+	-ms-transform:translate3d(0, 0, 0);
+	-o-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0);*/
 }
 
 .resultsTable tbody.bc_loading tr td {
@@ -3936,8 +3936,8 @@ Results Page
   display: block;
   border-bottom: 1px solid rgba(0, 0, 0, 0.36);
   transition: all 0.4s cubic-bezier(0.25, 1, 0.25, 1);
-                                                   /*transition-delay: 0.06s;
-margin-bottom: -42px;*/
+                                                     /*transition-delay: 0.06s;
+	margin-bottom: -42px;*/
 }
 
 .reefer-settings {
@@ -3993,28 +3993,29 @@ margin-bottom: -42px;*/
   padding-top: 348px;
 }
 
-/* show box with message before kontainers selected to get quotes -- 
+/* show box with message before kontainers selected to get quotes -- */
 .resultsRow.makeCentered:after {
-	content:"Your quotes will appear here...";
-	display:block;
-	width:100%;
-	border-radius:8px;
-	height:40px;
-	margin:0px 0 -140px 0;
-	font: 28px "bclever_font_light", tahoma, sans-serif;
-	font-style:italic;
-	color:rgba(255,255,255,0.2);
-	text-align:center;
-	padding:50px 0px;
-	position:relative;
-	top:38px;
-	background-image: linear-gradient(top, rgba(0, 0, 0, .18) 1%, transparent 100%);
-	background-image: -o-linear-gradient(top, rgba(0, 0, 0, .18) 1%, transparent 100%);
-	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, .18) 1%, transparent 100%);
-	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .18) 1%, transparent 100%);
-	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, .18) 1%, transparent 100%);
-	border-top:1px solid rgba(0,0,0,0.38);
-}*/
+  content: "Your quotes will appear here...";
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  height: 40px;
+  margin: 0px 0 -140px 0;
+  font: 28px "bclever_font_light", tahoma, sans-serif;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 50px 0px;
+  position: relative;
+  top: 38px;
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.18) 1%, transparent 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.18) 1%, transparent 100%);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.18) 1%, transparent 100%);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.18) 1%, transparent 100%);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.18) 1%, transparent 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.38);
+}
+
 .resultsRow h1.quotes-heading {
   margin-top: 8px;
   text-align: center;
@@ -4485,7 +4486,7 @@ a.btn_sendQuotes:after {
   background-image: url(../images/svg_sprite.png);
   background-position: -19px -413px;
   background-size: 400px 2500px;
-  margin: 7px 4px 0 3px;
+  margin: 9px 4px 0 3px;
   position: absolute;
 }
 
@@ -7282,15 +7283,15 @@ ul.contacts_list li span {
 
 ul.contacts_list li.my-address {
   /*background: #4E6A99;
-  	background: -moz-linear-gradient(top, rgba(78,106,153,1) 0%, rgba(24,50,93,1) 100%);
-  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4E6A99), color-stop(100%,#18325D));
-  	background: -webkit-linear-gradient(top, #4E6A99 0%,#18325D 100%);
-  	background: -o-linear-gradient(top, rgba(78,106,153,1) 0%,rgba(24,50,93,1) 100%);
-  	background: -ms-linear-gradient(top, rgba(78,106,153,1) 0%,rgba(24,50,93,1) 100%);
-  	background: linear-gradient(to bottom, #4E6A99 0%,#18325D 100%);
-  	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e6a99', endColorstr='#18325d',GradientType=0 );
-  	color: #FFF;
-  	border-bottom: 1px solid #2C5393;*/
+	background: -moz-linear-gradient(top, rgba(78,106,153,1) 0%, rgba(24,50,93,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4E6A99), color-stop(100%,#18325D));
+	background: -webkit-linear-gradient(top, #4E6A99 0%,#18325D 100%);
+	background: -o-linear-gradient(top, rgba(78,106,153,1) 0%,rgba(24,50,93,1) 100%);
+	background: -ms-linear-gradient(top, rgba(78,106,153,1) 0%,rgba(24,50,93,1) 100%);
+	background: linear-gradient(to bottom, #4E6A99 0%,#18325D 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e6a99', endColorstr='#18325d',GradientType=0 );
+	color: #FFF;
+	border-bottom: 1px solid #2C5393;*/
 }
 
 /*ul.contacts_list li.my-address span{
@@ -8444,9 +8445,9 @@ p.how-it-works-intro {
   height: 16px;
   width: 16px;
   position: relative;
-  background: url(../images/svg_sprite.png) no-repeat !important;
-  background-position: -17px -343px !important;
-  background-size: 400px 2500px !important;
+  background: url(../images/svg_sprite.png) no-repeat;
+  background-position: -17px -343px;
+  background-size: 400px 2500px;
   margin: 0px;
   top: 3px;
   left: -4px;
@@ -8457,23 +8458,23 @@ p.how-it-works-intro {
 }
 
 .nav ul li.btn_dash a:before {
-  background-position: -17px -359px !important;
+  background-position: -17px -359px;
 }
 
 .nav ul li.btn_profile a:before {
-  background-position: -17px -328px !important;
+  background-position: -17px -328px;
 }
 
 .nav ul li.btn_logout a:before {
-  background-position: -17px -312px !important;
+  background-position: -17px -312px;
 }
 
 .nav ul li.btn_support a:before {
-  background-position: -17px -373px !important;
+  background-position: -17px -373px;
 }
 
 .nav ul li.btn_messages a:before {
-  background-position: -17px -388px !important;
+  background-position: -17px -388px;
 }
 
 .notify {
@@ -11495,6 +11496,7 @@ html {
   height: calc(100% - 42px);
   overflow-y: scroll !important;
   margin-top: 42px !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* NAVIGATION */
@@ -11502,7 +11504,7 @@ html {
   height: auto;
   max-height: 42px;
   overflow: hidden;
-  width: 50px;
+  width: 44px;
   padding-left: 0px;
   border-bottom-right-radius: 0px;
   left: 0;
@@ -11513,23 +11515,51 @@ html {
   border: none;
   border-top: 1px solid #333;
   width: 100%;
-  padding: 0px 0px 2px 4px;
+  padding: 0px;
 }
 
-/*.non-app .bc_navbar .nav ul:before  {
-    content: "MENU";
-    display: block;
-    font: 20px "bclever_font_medium", tahoma, sans-serif;
-    color: rgba(255,255,255,0.3);
-    position: absolute;
-    margin: -33px 0 0 15px;
-  
-}*/
 .non-app .bc_navbar .nav ul li a {
-  padding: 10px 8px 10px 12px;
+  padding: 10px 8px 10px 14px;
   font-size: 15px;
   width: 100%;
   display: inline-block;
+}
+
+.non-app .bc_navbar .nav ul li a:hover {
+  background: #2ba6b3;
+}
+
+/*  Nav icons  */
+.non-app .bc_navbar .nav ul li a:before {
+  margin-right: 4px;
+}
+
+.bc_navbar .nav ul li.k-menu-quotes a:before {
+  background-position: -165px -528px;
+}
+
+.bc_navbar .nav ul li.k-menu-home a:before {
+  background-position: -185px -528px;
+}
+
+.bc_navbar .nav ul li.k-menu-blog a:before {
+  background-position: -204px -528px;
+}
+
+.bc_navbar .nav ul li.k-menu-how a:before {
+  background-position: -223px -528px;
+}
+
+.bc_navbar .nav ul li.k-menu-team a:before {
+  background-position: -242px -528px;
+}
+
+.bc_navbar .nav ul li.k-menu-contact a:before {
+  background-position: -260px -528px;
+}
+
+.bc_navbar .nav ul li.k-menu-kit a:before {
+  background-position: -279px -528px;
 }
 
 .non-app #nav-toggle span, .non-app #nav-toggle span:before, .non-app #nav-toggle span:after {
@@ -11573,9 +11603,9 @@ html {
   margin: 9px 2px 0 10px;
   -webkit-transition: all 0.4s cubic-bezier(0.68, 0.07, 0.37, 0.94);
   -moz-transition: all 0.4s cubic-bezier(0.68, 0.07, 0.37, 0.94);
-  -o-transition: all top 0.4s cubic-bezier(0.68, 0.07, 0.37, 0.94);
-  -ms-transition: all top 0.4s cubic-bezier(0.68, 0.07, 0.37, 0.94);
-  transition: all top 0.4s cubic-bezier(0.68, 0.07, 0.37, 0.94);
+  -o-transition: all 0.4s cubic-bezier(0.68, 0.07, 0.37, 0.94);
+  -ms-transition: all 0.4s cubic-bezier(0.68, 0.07, 0.37, 0.94);
+  transition: all 0.4s cubic-bezier(0.68, 0.07, 0.37, 0.94);
 }
 
 .non-app .open-nav #nav-toggle {
@@ -11607,22 +11637,18 @@ html {
   top: 8px;
 }
 
-.non-app .bc_navbar .nav ul li a:before {
-  background-image: none !important;
-  /* background-color: #444!important; */
-  /* border-radius: 88px; */
-  /* height: 8px; */
-  /* width: 8px; */
-  /* top: -1px; */
-  /* left: 1px; */
-  margin-right: -18px;
-  /*margin-right: 8px;*/
-}
-
 /* /NAVIGATION */
 /* homepage */
 .non-app.home-page section {
-  background-color: #000;
+  background-color: #010206;
+                            /* remove when pagepiling works
+	height: 100%;
+	position: absolute;
+	width: 100%;*/
+}
+
+.non-app.home-page #pagepiling section {
+  background-color: #010206;
   /* remove when pagepiling works*/
   height: 100%;
   position: absolute;
@@ -11641,20 +11667,24 @@ html {
   padding-right: 8px;
   font-size: 55px;
   color: #fff;
-  text-shadow: rgba(0, 0, 0, 0.8) 0px 0px 6px;
+  color: #eac033;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px;
+  font: 55px "bclever_font_medium", tahoma, sans-serif;
 }
 
 .non-app.k-blog-holder h1, .non-app.k-blog-holder h1 a {
   color: #F1BF1A;
+  color: #eac033;
+  font-size: 45px;
 }
 
 #pp-nav .bc_button, .non-app .brand_bar .bc_button {
   opacity: 1;
   -webkit-transition: all 0.5s cubic-bezier(0.68, 0.07, 0.37, 0.94);
   -moz-transition: all 0.5s cubic-bezier(0.68, 0.07, 0.37, 0.94);
-  -o-transition: all top 0.5s cubic-bezier(0.68, 0.07, 0.37, 0.94);
-  -ms-transition: all top 0.5s cubic-bezier(0.68, 0.07, 0.37, 0.94);
-  transition: all top 0.5s cubic-bezier(0.68, 0.07, 0.37, 0.94);
+  -o-transition: all 0.5s cubic-bezier(0.68, 0.07, 0.37, 0.94);
+  -ms-transition: all 0.5s cubic-bezier(0.68, 0.07, 0.37, 0.94);
+  transition: all 0.5s cubic-bezier(0.68, 0.07, 0.37, 0.94);
   position: fixed;
   top: 5px;
   right: 6px;
@@ -11673,7 +11703,7 @@ html {
   display: none;
 }
 
-#pp-nav.right.custom .bc_button {
+#pp-nav.right.custom .bc_button, .pp-viewing-kontainers #pp-nav .bc_button {
   opacity: 0;
   -webkit-transform: translate(0, -18px);
   -moz-transform: translate(0, -18px);
@@ -11740,7 +11770,7 @@ html {
 }
 
 .home-page-start .content_holder {
-  top: calc(50% - 208px);
+  top: calc(50% - 188px);
 }
 
 .non-app.home-page .content_holder .bc_button {
@@ -11753,8 +11783,8 @@ html {
 p.home-page-intro {
   text-align: center;
   color: #fff;
-  padding: 18px 118px 38px 118px;
-  font: 20px "bclever_font_light", tahoma, sans-serif;
+  padding: 8px 118px 38px 118px;
+  font: 23px "bclever_font_light", tahoma, sans-serif;
   text-shadow: rgba(0, 0, 0, 0.8) 0px 0px 6px;
 }
 
@@ -11790,7 +11820,7 @@ p.home-page-intro {
 }
 
 .non-app.home-page .testimonials-holder {
-  background-color: rgba(0, 0, 0, 0.68);
+  background-color: rgba(0, 0, 0, 0.48);
   width: 100%;
   padding: 20px 0 10px 0;
   position: absolute;
@@ -11800,6 +11830,12 @@ p.home-page-intro {
 
 /* Page Pileing */
 .pp-section {
+  height: 100%;
+               /*position: absolute;
+	width: 100%;*/
+}
+
+#pagepiling .pp-section {
   height: 100%;
   position: absolute;
   width: 100%;
@@ -11970,7 +12006,7 @@ p.home-page-intro {
   transform: scale(1);
   -webkit-filter: brightness(1);
   -moz-filter: brightness(1);
-  opacity: 0;
+  opacity: 1;
   transition-delay: 1s;
 }
 
@@ -12300,7 +12336,7 @@ p.home-page-intro {
   height: 100%;
 }
 
-.non-app.k-blog-holder article.post {
+.non-app.k-blog-holder article.post, .non-app.k-blog-holder .comments-area, .k-newsletter {
   background-color: #fff;
   border-radius: 2px;
   padding: 28px;
@@ -12308,7 +12344,79 @@ p.home-page-intro {
   margin-bottom: 28px;
 }
 
-.non-app.k-blog-holder img {
+.non-app.k-blog-holder .comments-area {
+  background-color: rgba(255, 255, 255, 0.88);
+}
+
+.k-newsletter {
+  background-color: rgba(0, 0, 0, 0.88);
+  box-shadow: none;
+  padding: 28px 28px 0px 28px;
+  border-radius: 4px;
+  background: -moz-linear-gradient(top, rgba(81, 81, 81, 0.88) 0%, rgba(0, 0, 0, 0.88) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(81, 81, 81, 0.88)), color-stop(100%, rgba(0, 0, 0, 0.88)));
+  background: -webkit-linear-gradient(top, rgba(81, 81, 81, 0.88) 0%, rgba(0, 0, 0, 0.88) 100%);
+  background: -o-linear-gradient(top, rgba(81, 81, 81, 0.88) 0%, rgba(0, 0, 0, 0.88) 100%);
+  background: -ms-linear-gradient(top, rgba(81, 81, 81, 0.88) 0%, rgba(0, 0, 0, 0.88) 100%);
+  background: linear-gradient(to bottom, rgba(81, 81, 81, 0.88) 0%, rgba(0, 0, 0, 0.88) 100%);
+}
+
+.k-newsletter .widget_mc4wp_widget h2 {
+  border: none;
+  padding: 0px 24px 0px 0;
+  margin: 0;
+  font: 22px "bclever_font_light", tahoma, sans-serif;
+  color: #fff;
+  display: block;
+  float: left;
+}
+
+.k-newsletter .mc4wp-form {
+  float: left;
+}
+
+.k-newsletter .mc4wp-form p {
+  float: left;
+}
+
+.k-newsletter .mc4wp-form input[type="email"] {
+  border-radius: 4px;
+  position: relative;
+  margin: -5px 0 0 0;
+  width: 100%;
+  min-width: 320px;
+  font: 18px "bclever_font_medium", tahoma, sans-serif;
+  background-color: rgba(0, 0, 0, 0.48);
+  padding: 8px 6px 8px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 8px 14px;
+}
+
+.k-newsletter .mc4wp-form input[type="submit"] {
+  color: #FFF;
+  border-radius: 4px;
+  border: none;
+  background: #2ba6b3;
+  padding: 8px 22px 8px 22px;
+  text-transform: auto;
+  font: 16px "bclever_font_medium", tahoma, sans-serif;
+  border-bottom: 2px solid #145f67;
+  border-top: 1px solid #40becb;
+  height: auto;
+  text-shadow: #1a7c87 -1px -1px 0px;
+  margin: -5px 0 0 8px;
+}
+
+.k-newsletter .mc4wp-form label {
+  display: none;
+}
+
+.k-newsletter .row .four {
+  padding-top: 3px;
+}
+
+.non-app.k-blog-holder .post img {
   width: 100%;
   margin-bottom: 28px;
 }
@@ -12325,9 +12433,9 @@ p.home-page-intro {
 }
 
 .non-app.k-blog-holder .form_holder p {
-  font: 16px Arial, tahoma, sans-serif;
+  font: 17px Arial, tahoma, sans-serif;
   color: #333;
-  line-height: 22px;
+  line-height: 24px;
   padding-bottom: 18px;
 }
 
@@ -12406,27 +12514,21 @@ p.home-page-intro {
   border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.widget_recent_entries {
+.widget_recent_entries, .widget_categories {
   border-radius: 4px;
   padding: 6px 12px;
   background-color: rgba(255, 255, 255, 0.1);
   border-bottom: 2px solid rgba(0, 0, 0, 0.8);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.19+0,0.02+100 */
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.02) 100%);
-  /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.19)), color-stop(100%, rgba(255, 255, 255, 0.02)));
-  /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.02) 100%);
-  /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.02) 100%);
-  /* Opera 11.10+ */
   background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.02) 100%);
-  /* IE10+ */
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.02) 100%);
-  /* W3C */
+  margin-right: 18px;
 }
 
-.widget_recent_entries h2 {
+.widget_recent_entries h2, .widget_categories h2 {
   border: none;
   padding: 2px;
   margin: 0;
@@ -12434,7 +12536,7 @@ p.home-page-intro {
   font: 16px "bclever_font_medium", tahoma, sans-serif;
 }
 
-.widget_recent_entries:after {
+.widget_recent_entries:after, .widget_categories:after {
   content: "";
   height: 22px;
   width: 22px;
@@ -12449,31 +12551,41 @@ p.home-page-intro {
   float: right;
 }
 
-.widget_recent_entries ul {
+.widget_recent_entries ul, .widget_categories ul {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.93);
   display: block;
   padding: 0;
   z-index: 999;
   width: 100%;
+  width: calc(100% - 18px);
   margin: 6px 0 0 -11px;
   overflow: hidden;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   max-height: 0px;
   opacity: 0;
+  -webkit-transition: all .38s ease-in-out;
+  -moz-transition: all .38s ease-in-out;
+  -o-transition: all .38s ease-in-out;
+  -ms-transition: all .38s ease-in-out;
+  transition: all .38s ease-in-out;
 }
 
-.widget_recent_entries:hover ul {
+.widget_recent_entries:hover, .widget_categories:hover {
+  cursor: pointer;
+}
+
+.widget_recent_entries.show-items ul, .widget_categories.show-items ul {
   opacity: 1;
   max-height: 9999px;
 }
 
-.widget_recent_entries ul li {
+.widget_recent_entries ul li, .widget_categories ul li {
   display: block;
 }
 
-.widget_recent_entries ul li a {
+.widget_recent_entries ul li a, .widget_categories ul li a {
   color: #fff;
   border-top: 1px solid #333;
   width: 100%;
@@ -12482,12 +12594,145 @@ p.home-page-intro {
   font: 14px "bclever_font_medium", tahoma, sans-serif;
 }
 
-.widget_recent_entries ul li a:hover {
+.widget_recent_entries ul li a:hover, .widget_categories ul li a:hover {
   background: #2ba6b3;
 }
 
-.widget_recent_entries ul li:first-of-type a {
+.widget_recent_entries ul li:first-of-type a, .widget_categories ul li:first-of-type a {
   border-top: none;
+}
+
+/* comments */
+.non-app.k-blog-holder .comments-area h2 {
+  border: none;
+  padding: 8px 0 30px 0;
+  margin: 0;
+  font: 18px "bclever_font_medium", tahoma, sans-serif;
+}
+
+.comment-list {
+  list-style: none;
+  margin: 0;
+}
+
+.comment-list article, .comment-list .pingback, .comment-list .trackback {
+  padding: 12px 0;
+}
+
+.comment-list .children {
+  list-style: none;
+  margin: 0;
+}
+
+.comment-author img.avatar {
+  float: left;
+  height: 44px;
+  margin-right: 18px;
+  width: 44px;
+  border-radius: 4px;
+}
+
+.comment-content {
+  border: 1px solid #ddd;
+  padding: 28px 28px 8px 28px;
+  border-radius: 4px;
+  margin-top: 18px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.18);
+  background-color: #fff;
+}
+
+.non-app.k-blog-holder .form_holder .comment-content p {
+  padding: 0;
+  color: #080c10;
+  padding-bottom: 10px;
+}
+
+.comment-list .children > li {
+  padding-left: 38px;
+}
+
+.reply a, .comment-respond input[type="submit"].submit {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 4px;
+  margin: 10px 0 18px 0;
+  color: #888;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.38);
+}
+
+.comment-respond input[type="submit"].submit {
+  padding: 18px;
+}
+
+.reply a:hover, .comment-respond input[type="submit"].submit:hover {
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: #2ba6b3;
+  color: #fff;
+}
+
+.comment-respond {
+  padding: 48px;
+  border-top: 1px solid #ccc;
+}
+
+.comment-respond h3, .comment-respond label {
+  border: none;
+  padding: 18px 0 30px 0;
+  margin: 0;
+  font: 18px "bclever_font_medium", tahoma, sans-serif;
+  color: #111;
+}
+
+.comment-respond input[type="text"], .comment-respond input[type="email"], .comment-respond input[type="url"], .comment-respond textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 0 0;
+}
+
+#cancel-comment-reply-link {
+  float: right;
+  background-color: #333;
+  padding: 14px 12px;
+  border-radius: 4px;
+  margin: 10px 0 0 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.non-app.k-blog-holder .form_holder .post .widget_synved_social_share h2 {
+  margin-bottom: 20px;
+  margin-top: -10px;
+  padding: 0px;
+  position: relative;
+  font-size: 22px;
+  width: 100px;
+}
+
+.non-app.k-blog-holder .form_holder .page-header {
+  background-color: rgba(0, 0, 0, 0.38);
+  padding: 18px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+  width: 100%;
+  margin: 18px 0 0px 0;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.38) 0%, transparent 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.38)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.38) 0%, transparent 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.38) 0%, transparent 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.38) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.38) 0%, transparent 100%);
+  margin-bottom: 10px;
+}
+
+.non-app.k-blog-holder .form_holder .page-header h1 {
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
 }
 
 /* ipad only */
@@ -12498,15 +12743,13 @@ p.home-page-intro {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% auto;
-    background-attachment: fixed;
   }
 
-  .section-2 {
+  .section-2, .future-image-holder {
     background-image: url(../images/wp-section-2.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
-    background-size: 100% auto;
-    background-attachment: fixed;
+    background-size: 88% auto;
   }
 
   .section-3 {
@@ -12514,7 +12757,6 @@ p.home-page-intro {
     background-repeat: no-repeat;
     background-position: 0 center;
     background-size: 100% auto;
-    background-attachment: fixed;
   }
 
   .section-4 {
@@ -12522,7 +12764,6 @@ p.home-page-intro {
     background-repeat: no-repeat;
     background-position: 0 center;
     background-size: 100% auto;
-    background-attachment: fixed;
   }
 
   .non-app.k-blog-holder .form_holder {
@@ -12530,16 +12771,22 @@ p.home-page-intro {
     background-repeat: no-repeat;
     background-position: 0 center;
     background-size: 100% auto;
-    background-attachment: fixed;
   }
 }
 /* -------------------------------------------------------------------------------------------- */
 /* ----------------------------------------MOBILE--------------------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
 @media (max-width: 945px) {
-  /*.mobile-footer-link {
-  	display:block;
-  	}*/
+  .non-app .brand_bar .bc_button {
+    opacity: 0;
+  }
+
+  .non-app.k-blog-holder .form_holder .post h2 {
+    font-size: 22px;
+    padding: 20px 30px 20px 20px;
+    margin-top: 28px;
+  }
+
   #pp-nav .bc_button {
     top: auto;
     bottom: 5px;
@@ -12586,6 +12833,18 @@ p.home-page-intro {
 
   .non-app.home-page h1, .non-app.k-blog-holder h1 {
     font-size: 38px;
+  }
+
+  .non-app.k-blog-holder .form_holder .post .widget_synved_social_share h2 {
+    margin-top: 10px;
+  }
+
+  .widget_recent_entries, .widget_categories {
+    margin-right: 0px;
+  }
+
+  .widget_recent_entries {
+    margin-bottom: 12px;
   }
 }
 /* -------------------------------------------------------------------------------------------- */
