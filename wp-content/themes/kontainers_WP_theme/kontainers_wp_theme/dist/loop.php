@@ -55,14 +55,8 @@
 
 	</div>
 
-	<footer class="entry-footer"> <a href="blog-post.html"> <span class="posted-on"><span class="screen-reader-text">Posted on </span></span></a><a href="blog-post.html" rel="bookmark">
-			<time class="entry-date published" datetime="2015-09-24T14:49:09+00:00">September 24, 2015</time>
-			<time class="updated" datetime="2015-10-07T07:19:20+00:00">October 7, 2015</time>
-		</a>
-
-		<?php
-		kontainers_wp_theme_post_meta(); ?>
-
+	<footer class="entry-footer">
+		<? kontainers_wp_theme_post_meta(); ?>
 	</footer>
 
 </article>

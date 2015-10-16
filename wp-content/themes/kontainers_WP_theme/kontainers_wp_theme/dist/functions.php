@@ -71,7 +71,6 @@ function kontainers_wp_theme_post_meta() {
 	edit_post_link( __( ' (edit)', 'kontainers_wp_theme' ), '<span class="edit-link">', '</span>' );
 }
 
-
 /**
  * Add Google Analytics code
  */

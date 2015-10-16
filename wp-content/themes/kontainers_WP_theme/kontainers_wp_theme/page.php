@@ -6,17 +6,26 @@
  * @subpackage kontainers_WP_theme
  * @since kontainers_WP_theme 1.0
  */
-
 get_header();
-
-
 /*
 	Switch statement to alter the class added to the 'non-app' div
 	TODO - move this to be post-meta so it's configurable from CMS
 */
+
+//$serverHost = $_SERVER['HTTP_HOST'] ;
+
 switch ($pagename) {
-	case "Contact Us":
-		$currentPage_class = "contact-us";
+//	case "Contact Us":
+//		$currentPage_class = "contact-us";
+//
+//		if (fnmatch('*kontainers.co.uk', $serverHost)) {
+//
+//			// .co.uk domain
+//
+//		} else {
+//			// not .co.uk
+//		}
+
 	case "FAQ":
 		$currentPage_class = "faq";
 	case "Cookie Policy":
@@ -43,7 +52,6 @@ switch ($pagename) {
 ?>
 <!--  This holds the WP page Content -  -->
 <div class="non-app <?php echo $currentPage_class?>">
-
 	<!--  Top bar with nav -->
 	<?php include('top-nav.php') ?>
 
