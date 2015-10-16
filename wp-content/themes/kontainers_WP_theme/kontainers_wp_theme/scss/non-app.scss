@@ -512,6 +512,10 @@ p.home-page-intro {
 .widget_recent_entries ul li:first-of-type a, .widget_categories ul li:first-of-type a {
   border-top: none;
 }
+.post-content h3 {
+  color: rgba(0,0,0,0.8);
+  font-size: 28px;
+}
 /* comments */
 .non-app.k-blog-holder .comments-area h2 {
   border: none;
@@ -626,6 +630,46 @@ p.home-page-intro {
   font-size: 20px;
   color: #fff;
   text-align: left;
+}
+.btn-blog-movie {
+  color: rgba(255,255,255,0.68);
+  display: block;
+  margin: 38px auto;
+  font: 16px "bclever_font_medium", tahoma, sans-serif;
+}
+.btn-blog-movie:hover {
+  color: #fff;
+}
+.blog-tel {
+
+  display: block;
+  width: 200px;
+  height: 30px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  color: #fff;
+  text-align: right;
+}
+.blog-tel a {
+  font: 16px "bclever_font_medium", tahoma, sans-serif;
+  color: #fff;
+  padding: 10px 14px 10px 8px;
+  display: block;
+}
+.blog-tel a:before, .btn-blog-movie:before {
+  content: "";
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  position: relative;
+  background: url(../images/svg_sprite.png) no-repeat;
+  background-position: -303px -523px;
+  background-size: 400px 2500px;
+  margin: 0px 6px -5px 0px;
+}
+.blog-tel a:before {
+  background-position: -327px -523px;
 }
 
 /* ipad only */
