@@ -24,7 +24,7 @@
 	<?php if ( !is_singular() ) : ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
-		<a href='<?php the_permalink(); ?>' rel='canonical'>Continue reading &rarr;</a>
+		<a href='<?php the_permalink(); ?>' rel='canonical'>Continue reading</a>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">

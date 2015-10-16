@@ -8,7 +8,7 @@ Template to display author biography.
 	<h4> About <strong><?php the_author_meta( 'display_name' ); ?></strong> </h4>
 	<p> 
 		<?php the_author_meta( 'description' ); ?>
-		<a href='#' rel='canonical'>Find out more &rarr;</a> 
+		<a href='#' rel='canonical'>Find out more</a>
 	</p>
 	<div class='clear'></div>
 </aside>
