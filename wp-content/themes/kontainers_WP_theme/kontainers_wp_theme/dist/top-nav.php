@@ -1,5 +1,5 @@
 <!--  Top bar with nav -->
-<div class="brand_bar"><a class="bclever_logo" href="#"><span>Kontainers</span></a>
+<div class="brand_bar"><a class="bclever_logo" href=""><span>Kontainers</span></a>
     <div class="bc_navbar">
         <nav id="menu" class="nav"><a id="nav-toggle" href="#"><span></span></a>
             <ul>

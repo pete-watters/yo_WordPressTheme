@@ -61,7 +61,7 @@ add_action( 'wp_enqueue_scripts', 'kontainers_wp_theme_enqueue_scripts' );
 function kontainers_wp_theme_post_meta() {
 	if ( get_post_type() == 'post' ) {
 		echo sprintf(
-			__( 'Posted %s in %s%s by %s. ', 'kontainers_wp_theme' ),
+			__( 'Posted on %s in %s%s. ', 'kontainers_wp_theme' ),
 			get_the_time( get_option( 'date_format' ) ),
 			get_the_category_list( ', ' ),
 			get_the_tag_list( __( ', <b>Tags</b>: ', 'kontainers_wp_theme' ), ', ' ),
@@ -70,3 +70,27 @@ function kontainers_wp_theme_post_meta() {
 	}
 	edit_post_link( __( ' (edit)', 'kontainers_wp_theme' ), '<span class="edit-link">', '</span>' );
 }
+
+
+/**
+ * Add Google Analytics code
+ */
+
+	add_action('wp_footer', 'add_googleanalytics');
+	function add_googleanalytics() {
+?>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-58749663-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+
+<?php } ?>

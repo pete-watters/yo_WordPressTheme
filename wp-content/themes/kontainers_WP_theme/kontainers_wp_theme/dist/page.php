@@ -1,112 +1,72 @@
-<?php get_header(); ?>
+<?php
+/**
+ * kontainers_WP_theme template for displaying Pages
+ *
+ * @package WordPress
+ * @subpackage kontainers_WP_theme
+ * @since kontainers_WP_theme 1.0
+ */
 
-	<!--  This holds the WP page Content - the appended class (e.g. home-page) needs to be pplied for individual pages-->
-	<div class="non-app home-page">
-
-		<!--  Top bar with nav -->
-		<?php include('top-nav.php') ?>
-
-		<!--  Piled content - homepage slides transitioned by scroll-->
-		<div id="pagepiling">
-			<section class="section home-page-start" id="section1">
-				<div class="content_holder">
-					<h1>Shipping made Simple</h1>
-					<p class="home-page-intro">Kontainers is the smart and efficient new way to ship your containers. Instantly compare multiple carriers and freight schedules, allowing for up to <strong>80% faster and 20% cheaper</strong> bookings.</p>
-					<a class="bc_button action_goToApp">Get Instant Quotes</a> </div>
+get_header();
 
 
-				<!-- to be used when we have more content and have more slides
-                  <a href="#page2" class="btn_start"></a>
-                  -->
+/*
+	Switch statement to alter the class added to the 'non-app' div
+	TODO - move this to be post-meta so it's configurable from CMS
+*/
+switch ($pagename) {
+	case "Contact Us":
+		$currentPage_class = "contact-us";
+	case "FAQ":
+		$currentPage_class = "faq";
+	case "Cookie Policy":
+		$currentPage_class = "cookie-policy";
+        break;
+	case "How It Works":
+		$currentPage_class = "how-it-works";
+        break;
+	case "Media Kit":
+		$currentPage_class = "media-kit";
+		break;
+	case "Terms & Conditions":
+		$currentPage_class = "terms";
+		break;
+	case "The Team":
+		$currentPage_class = "who-we-are";
+		break;
+	default:
+		$currentPage_class = "";
+	break;
+}
 
-				<!--testimonials-->
-				<?php include('testimonials.php') ?>
-				<!--/testimonials-->
 
+?>
+<!--  This holds the WP page Content -  -->
+<div class="non-app <?php echo $currentPage_class?>">
+
+	<!--  Top bar with nav -->
+	<?php include('top-nav.php') ?>
+
+	<!--  form_holder - holds scrolling content -->
+	<div class="form_holder">
+
+		<!--  conent_holder - positions content -->
+		<div class="content_holder">
+			<section class="page-content primary" role="main">
+				<article class="post">
+					<?php //loop to get content
+					if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; ?>
+				</article>
 			</section>
-
-
 		</div>
-		<!-- /pagepiling -->
+		<!--/content_holder-->
 
 	</div>
-	<!-- This holds the WP page Content - /non-app-->
+	<!--/form_holder-->
 
-
-<!--Original PHP from index to show blog posts below -->
-
-
-	<!-- GENERATED CONTENT BELOW -->
-		<section class="page-content primary" role="main">
-			<?php
-			if ( have_posts() ):
-
-				while ( have_posts() ) : the_post();
-
-					get_template_part( 'loop', get_post_format() );
-
-					wp_link_pages(
-						array(
-							'before'           => '<div class="linked-page-nav"><p>' . sprintf( __( '<em>%s</em> is separated in multiple parts:', 'kontainers_wp_theme' ), get_the_title() ) . '<br />',
-							'after'            => '</p></div>',
-							'next_or_number'   => 'number',
-							'separator'        => ' ',
-							'pagelink'         => __( '&raquo; Part %', 'kontainers_wp_theme' ),
-						)
-					);
-
-				endwhile;
-
-			else :
-
-				get_template_part( 'loop', 'empty' );
-
-			endif;
-		?>
-			<div class="pagination">
-
-				<?php get_template_part( 'template-part', 'pagination' ); ?>
-
-			</div>
-		</section>
-
-
-<!--Original PHP from page.php below -->
-
-	<section class="page-content primary" role="main">
-
-		<?php
-			if ( have_posts() ) : the_post();
-
-				get_template_part( 'loop' ); ?>
-
-				<aside class="post-aside"><?php
-
-					wp_link_pages(
-						array(
-							'before'           => '<div class="linked-page-nav"><p>' . sprintf( __( '<em>%s</em> is separated in multiple parts:', 'kontainers_wp_theme' ), get_the_title() ) . '<br />',
-							'after'            => '</p></div>',
-							'next_or_number'   => 'number',
-							'separator'        => ' ',
-							'pagelink'         => __( '&raquo; Part %', 'kontainers_wp_theme' ),
-						)
-					); ?>
-
-					<?php
-						if ( comments_open() || get_comments_number() > 0 ) :
-							comments_template( '', true );
-						endif;
-					?>
-
-				</aside><?php
-
-			else :
-
-				get_template_part( 'loop', 'empty' );
-
-			endif;
-		?>
-
-	</section>
-
+</div>
 <?php get_footer(); ?>
+
+

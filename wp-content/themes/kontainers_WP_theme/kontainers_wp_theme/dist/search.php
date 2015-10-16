@@ -8,50 +8,75 @@
  */
 
 get_header(); ?>
+	<!--  This holds the WP page Content - k-blog-holder class for blog pages only -->
+	<div class="non-app k-blog-holder">
 
-	<section class="page-content primary" role="main"><?php
+		<!--  Sliding shutters preloader -->
+		<div class="page-loader">
+			<div class="page-loader-slide-one"></div>
+			<div class="page-loader-slide-two"></div>
+		</div>
 
-		if ( have_posts() ) : ?>
+		<!--  Top bar with nav -->
+		<?php include('top-nav.php') ?>
 
-			<div class="search-title">
-				<h1 ><?php printf( __( 'Search Results for: %s', 'kontainers_wp_theme' ), get_search_query() ); ?></h1>
+		<!--  form_holder - holds scrolling content -->
+		<div class="form_holder">
 
-				<div class="second-search">
-					<p>
-						<?php _e( 'Not what you searched for? Try again with some different keywords.', 'kontainers_wp_theme' ); ?>
-					</p>
+			<!--  conent_holder - positions content -->
+			<div class="content_holder">
+				<h1> <a href="<?php echo get_page_link() ?>">Shipping Blog</a></h1>
 
-					<?php get_search_form(); ?>
-				</div>
-			</div><?php
 
-			while ( have_posts() ) : the_post();
+				<!--  blog-nav - holds navigation elements scraped from standard WP elements -->
+				<?php include('blog-nav.php'); ?>
 
-				get_template_part( 'loop', get_post_format() );
 
-				wp_link_pages(
-					array(
-						'before'           => '<div class="linked-page-nav"><p>' . sprintf( __( '<em>%s</em> is separated in multiple parts:', 'kontainers_wp_theme' ), get_the_title() ) . '<br />',
-						'after'            => '</p></div>',
-						'next_or_number'   => 'number',
-						'separator'        => ' ',
-						'pagelink'         => __( '&raquo; Part %', 'kontainers_wp_theme' ),
-					)
-				);
 
-			endwhile;
+				<section class="page-content primary" role="main"><?php
 
-		else :
+					if ( have_posts() ) : ?>
 
-			get_template_part( 'loop', 'empty' );
 
-		endif; ?>
+						<header class="page-header">
+							<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'kontainers_wp_theme' ), get_search_query() ); ?></h1>
+						</header>
 
-		<div class="pagination">
+							<?php
 
-			<?php get_template_part( 'template-part', 'pagination' ); ?>
+						while ( have_posts() ) : the_post();
+
+							get_template_part( 'loop', get_post_format() );
+
+							wp_link_pages(
+								array(
+									'before'           => '<div class="linked-page-nav"><p>' . sprintf( __( '<em>%s</em> is separated in multiple parts:', 'kontainers_wp_theme' ), get_the_title() ) . '<br />',
+									'after'            => '</p></div>',
+									'next_or_number'   => 'number',
+									'separator'        => ' ',
+									'pagelink'         => __( '&raquo; Part %', 'kontainers_wp_theme' ),
+								)
+							);
+
+						endwhile;
+
+					else :
+						get_template_part( 'loop', 'empty' );
+
+					endif; ?>
+
+					<div class="pagination">
+
+						<?php get_template_part( 'template-part', 'pagination' ); ?>
+
+					</div>
+				</section>
+			</div>
+			<!--/content_holder-->
 
 		</div>
-	</section>
+		<!--/form_holder-->
 
+	</div>
+	<!-- This holds the WP page Content - /non-app k-blog-holder-->
 <?php get_footer(); ?>

@@ -9,12 +9,28 @@
 
 get_header(); ?>
 
-	<section class="page-content primary" role="main"><?php
+<!--  This holds the WP page Content - k-blog-holder class for blog pages only -->
+<div class="non-app k-blog-holder">
 
-		if ( have_posts() ) : ?>
+	<!--  Top bar with nav -->
+	<?php include('top-nav.php') ?>
 
-			<h1 class="archive-title">
-				<?php
+	<!--  form_holder - holds scrolling content -->
+	<div class="form_holder">
+
+		<!--  conent_holder - positions content -->
+		<div class="content_holder">
+
+			<h1> <a href="<?php echo get_page_link() ?>">Shipping Blog</a></h1>
+			<!--  blog-nav - holds navigation elements scraped from standard WP elements -->
+			<?php include('blog-nav.php'); ?>
+			<section class="page-content primary" role="main"><?php
+
+				if ( have_posts() ) : ?>
+
+					<header class="page-header">
+						<h1 class="page-title">
+					<?php
 					if ( is_category() ):
 						printf( __( 'Category Archives: %s', 'kontainers_wp_theme' ), single_cat_title( '', false ) );
 
@@ -42,45 +58,58 @@ get_header(); ?>
 						_e( 'Archives', 'kontainers_wp_theme' );
 
 					endif;
-				?>
-			</h1><?php
+					?>
+						</h1>
+					</header>
 
-			if ( is_category() || is_tag() || is_tax() ):
-				$term_description = term_description();
-				if ( ! empty( $term_description ) ) : ?>
 
-					<div class="archive-description"><?php
-						echo $term_description; ?>
-					</div><?php
+					<?php
 
-				endif;
-			endif;
+					if ( is_category() || is_tag() || is_tax() ):
+						$term_description = term_description();
+						if ( ! empty( $term_description ) ) : ?>
 
-			if ( is_author() && get_the_author_meta( 'description' ) ) : ?>
+							<div class="archive-description"><?php
+							echo $term_description; ?>
+							</div><?php
 
-				<div class="archive-description">
-					<?php the_author_meta( 'description' ); ?>
-				</div><?php
+						endif;
+					endif;
 
-			endif;
+					if ( is_author() && get_the_author_meta( 'description' ) ) : ?>
 
-			while ( have_posts() ) : the_post();
+						<div class="archive-description">
+						<?php the_author_meta( 'description' ); ?>
+						</div><?php
 
-				get_template_part( 'loop', get_post_format() );
+					endif;
 
-			endwhile;
+					while ( have_posts() ) : the_post();
 
-		else :
+						get_template_part( 'loop', get_post_format() );
 
-			get_template_part( 'loop', 'empty' );
+					endwhile;
 
-		endif; ?>
+				else :
 
-		<div class="pagination">
+					get_template_part( 'loop', 'empty' );
 
-			<?php get_template_part( 'template-part', 'pagination' ); ?>
+				endif; ?>
+
+				<div class="pagination">
+
+					<?php get_template_part( 'template-part', 'pagination' ); ?>
+
+				</div>
+			</section>
 
 		</div>
-	</section>
+		<!--/content_holder-->
 
+	</div>
+	<!--/form_holder-->
+
+</div>
 <?php get_footer(); ?>
+
+

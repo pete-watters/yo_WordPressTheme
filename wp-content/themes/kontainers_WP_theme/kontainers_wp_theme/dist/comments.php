@@ -13,8 +13,8 @@
 		return;
 	}
 ?>
-
-<div id="comments" class="comments">
+<!-- comments -->
+<div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
 
@@ -62,6 +62,6 @@
 
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php include("commentform.php"); ?>
 
 </div>

@@ -27,54 +27,10 @@ get_header();
 
             <!--  conent_holder - positions content -->
             <div class="content_holder">
-                <h1> <a class="blogURL.html">Shipping Blog</a></h1>
+                <h1> <a class="<?php echo get_page_link() ?>">Shipping Blog</a></h1>
 
                 <!--  blog-nav - holds navigation elements scraped from standard WP elements -->
-                <div class="blog-nav">
-                    <div class="row">
-                        <div class="four columns">
-
-                            <!--  widget_recent_entries - scraped from standard WP recent entries -->
-                            <aside id="recent-posts-2" class="widget widget_recent_entries">
-
-                                <h2 class="widget-title">Recent Posts</h2>
-                                <ul>
-                                    <?php
-                                    $args = array(
-                                        'numberposts' => 10,
-                                        'category' => 'blog',
-                                        'orderby' => 'post_date',
-                                        'order' => 'DESC',);
-                                    $recent_posts = wp_get_recent_posts($args);
-                                    foreach( $recent_posts as $recent ){
-                                        echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
-                                    }
-                                    ?>
-                                </ul>
-                            </aside>
-                            <!--  /widget_recent_entries-->
-
-
-
-
-                        </div>
-                        <div class="four columns"></div>
-                        <div class="four columns">
-
-
-                            <?php get_search_form(); ?>
-                            <!--  search-form - scraped from standard WP search -->
-                            <!--                            <form role="search" method="get" class="search-form" action="http://chaosdigital.co.uk/kontainers/">-->
-                            <!--                                <label> <span class="screen-reader-text">Search for:</span>-->
-                            <!--                                    <input type="search" class="search-field" placeholder="Search the Blog" value="" name="s" title="Search for:">-->
-                            <!--                                </label>-->
-                            <!--                                <input type="submit" class="search-submit screen-reader-text" value="Search">-->
-                            <!--                            </form>-->
-                            <!--  /search-form -->
-
-                        </div>
-                    </div>
-                </div>
+                <?php include('blog-nav.php'); ?>
 
                 <!-- main - scraped from standard WP page structure -->
                 <main id="main" class="site-main" role="main">
