@@ -56,7 +56,9 @@
 	</div>
 
 	<footer class="entry-footer">
-		<? kontainers_wp_theme_post_meta(); ?>
+
+		<?php kontainers_wp_theme_post_meta(); ?>
+
 	</footer>
 
 </article>

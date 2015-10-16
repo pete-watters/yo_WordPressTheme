@@ -115,7 +115,7 @@ $(document).ready(function(){
 		}
 		setTimeout(t, 2888);
 	});
-
+	
 
 	<!-- hamburger button animate to close-->
 	$('#nav-toggle').click(function(e){
