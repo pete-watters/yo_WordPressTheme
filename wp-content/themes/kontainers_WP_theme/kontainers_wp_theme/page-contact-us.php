@@ -11,18 +11,19 @@ get_header();
 	Switch statement to alter the class added to the 'non-app' div
 	TODO - move this to be post-meta so it's configurable from CMS
 */
-// get URL
-$serverHost = $_SERVER['HTTP_HOST'] ;
 $currentPage_class = "contact-us";
 
+
+// get URL
+$serverHost = $_SERVER['HTTP_HOST'] ;
 if (fnmatch('*kontainers.co.uk', $serverHost)) {
     // .co.uk domain
-    $phone_number = get_post_meta($post->ID, "kontainers_uk_email", true);
-    $contact_email = get_post_meta($post->ID, "kontainers_uk_phone", true);
+    $phone_number = get_post_meta($post->ID, "kontainers_uk_phone", true);
+    $contact_email = get_post_meta($post->ID, "kontainers_uk_email", true);
 } else {
     // not .co.uk e.g. us
-    $phone_number = get_post_meta($post->ID, "kontainers_us_email", true);
-    $contact_email = get_post_meta($post->ID, "kontainers_us_phone", true);
+    $phone_number = get_post_meta($post->ID, "kontainers_us_phone", true);
+    $contact_email = get_post_meta($post->ID, "kontainers_us_email", true);
 }
 ?>
 <!--  This holds the WP page Content -  -->
@@ -50,7 +51,7 @@ if (fnmatch('*kontainers.co.uk', $serverHost)) {
 
                                     <div class="four columns">
                                         <div class="contact-action action-phone"><strong>Call</strong>
-                                            <a href="tel:<?php echo trim($phone_number) ?>"><?php echo $phone_number ?></a>
+                                            <a href="tel:<?php echo str_replace(' ', '', $phone_number); ?>"><?php echo $phone_number ?></a>
                                         </div>
                                     </div>
 
