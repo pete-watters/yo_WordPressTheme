@@ -2,6 +2,10 @@
 
 	<!--  This holds the WP page Content - the appended class (e.g. home-page) needs to be pplied for individual pages-->
 	<div class="non-app home-page">
+		<!-- Video modal -->
+		<div class="video_modal"> <a class="btn-close closeVideo"  onclick="pause()"><span class="displayNone">Close Video</span></a>
+			<div class="video-holder" id="video-holder"> </div>
+		</div>
 
 		<!--  Top bar with nav -->
 		<?php include('top-nav.php') ?>
