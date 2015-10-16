@@ -115,7 +115,12 @@ $(document).ready(function(){
 		}
 		setTimeout(t, 2888);
 	});
-
+	$('.k-menu-quotes a').click(function(e){
+			e.preventDefault();
+			// fake click to go to the quote page
+			$('.action_goToApp').click();
+		}
+	);
 
 	<!-- hamburger button animate to close-->
 	$('#nav-toggle').click(function(e){
