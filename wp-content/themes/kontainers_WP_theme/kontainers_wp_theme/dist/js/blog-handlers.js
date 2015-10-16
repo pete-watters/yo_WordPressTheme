@@ -115,7 +115,12 @@ $(document).ready(function(){
 		}
 		setTimeout(t, 2888);
 	});
-	
+	$('.k-menu-quotes a').click(function(e){
+			e.preventDefault();
+			// fake click to go to the quote page
+			$('.action_goToApp').click();
+		}
+	);
 
 	<!-- hamburger button animate to close-->
 	$('#nav-toggle').click(function(e){
@@ -132,5 +137,20 @@ $(document).ready(function(){
 			<!-- blog - hide recent posts list-->
 			$( this ).removeClass( "show-items" );
 		}
+	});
+
+	<!-- intro video-->
+	$('.intro-help').click(function(e){
+		$('.video_modal').addClass('videoOpen');
+		<!-- Inject the video  -->
+		document.getElementById('video-holder').innerHTML = '<iframe src="http://player.vimeo.com/external/126965017.hd.mp4?s=242f22f10780158837339fed5c5a4b9a&profile_id=113" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+	});
+	<!-- close Video -->
+	$('.closeVideo').click(function(){
+		$('.video_modal').removeClass('videoOpen');
+		<!-- delay video being removed until modal off screen and inject with nothing-->
+		t = function () {
+			document.getElementById('video-holder').innerHTML = '';
+		}, setTimeout(t, 888)
 	});
 });

@@ -12,20 +12,7 @@ get_header();
 	TODO - move this to be post-meta so it's configurable from CMS
 */
 
-//$serverHost = $_SERVER['HTTP_HOST'] ;
-
 switch ($pagename) {
-//	case "Contact Us":
-//		$currentPage_class = "contact-us";
-//
-//		if (fnmatch('*kontainers.co.uk', $serverHost)) {
-//
-//			// .co.uk domain
-//
-//		} else {
-//			// not .co.uk
-//		}
-
 	case "FAQ":
 		$currentPage_class = "faq";
 	case "Cookie Policy":

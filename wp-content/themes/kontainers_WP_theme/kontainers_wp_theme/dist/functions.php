@@ -73,6 +73,38 @@ function kontainers_wp_theme_post_meta() {
 	edit_post_link( __( ' (edit)', 'kontainers_wp_theme' ), '<span class="edit-link">', '</span>' );
 }
 
+
+/**
+ * Include editor stylesheets
+ * @return void
+ */
+//TODO move functionality from top-nav and contact-us here to share global vars
+//function kontainers_wp_theme_check_domain() {
+//
+//
+//	global $phone_number;
+//	global $contact_email;
+//
+//	/* Domain internationalisation */
+//	$serverHost = $_SERVER['HTTP_HOST'] ;
+//	if (fnmatch('*kontainers.co.uk', $serverHost)) {
+//		// .co.uk domain
+//		$phone_number = get_post_meta($post->ID, "kontainers_uk_email", true);
+//		$contact_email = get_post_meta($post->ID, "kontainers_uk_phone", true);
+//	} else {
+//		// not .co.uk e.g. us
+//		$phone_number = get_post_meta($post->ID, "kontainers_us_email", true);
+//		$contact_email = get_post_meta($post->ID, "kontainers_us_phone", true);
+//	}
+//	//return [$phone_number, $contact_email];
+//}
+//add_action( 'init', 'kontainers_wp_theme_check_domain' );
+
+
+
+
+
+
 /**
  * Add Google Analytics code
  */
