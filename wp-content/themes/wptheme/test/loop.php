@@ -37,7 +37,7 @@
 		<?php if ( is_front_page() || is_category() || is_archive() || is_search() ) : ?>
 
 			<?php the_excerpt(); ?>
-			<a href="<?php the_permalink(); ?>"><?php _e( 'Read more &raquo;', 'test' ); ?></a>
+			<a href="<?php the_permalink(); ?>"><?php _e( 'Read more ', 'test' ); ?></a>
 
 		<?php else : ?>
 

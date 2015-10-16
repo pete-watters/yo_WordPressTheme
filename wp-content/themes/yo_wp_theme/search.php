@@ -35,7 +35,7 @@ get_header(); ?>
 						'after'            => '</p></div>',
 						'next_or_number'   => 'number',
 						'separator'        => ' ',
-						'pagelink'         => __( '&raquo; Part %', 'yo_wp_theme' ),
+						'pagelink'         => __( ' Part %', 'yo_wp_theme' ),
 					)
 				);
 

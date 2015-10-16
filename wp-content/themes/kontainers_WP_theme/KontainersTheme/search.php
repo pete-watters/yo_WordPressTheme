@@ -54,7 +54,7 @@ get_header(); ?>
 									'after'            => '</p></div>',
 									'next_or_number'   => 'number',
 									'separator'        => ' ',
-									'pagelink'         => __( '&raquo; Part %', 'kontainers_wp_theme' ),
+									'pagelink'         => __( ' Part %', 'kontainers_wp_theme' ),
 								)
 							);
 

@@ -670,7 +670,7 @@ function wp_nav_menu_item_post_type_meta_box( $object, $post_type ) {
 		),
 		'format' => '',
 		'prev_text' => __('&laquo;'),
-		'next_text' => __('&raquo;'),
+		'next_text' => __(''),
 		'total' => $num_pages,
 		'current' => $pagenum
 	));
@@ -927,7 +927,7 @@ function wp_nav_menu_item_taxonomy_meta_box( $object, $taxonomy ) {
 		),
 		'format' => '',
 		'prev_text' => __('&laquo;'),
-		'next_text' => __('&raquo;'),
+		'next_text' => __(''),
 		'total' => $num_pages,
 		'current' => $pagenum
 	));

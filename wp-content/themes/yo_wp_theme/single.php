@@ -20,7 +20,7 @@ get_header(); ?>
 
 					<div class="post-links">
 						<?php previous_post_link( '%link', __( '&laquo; Previous post', 'yo_wp_theme' ) ) ?>
-						<?php next_post_link( '%link', __( 'Next post &raquo;', 'yo_wp_theme' ) ); ?>
+						<?php next_post_link( '%link', __( 'Next post ', 'yo_wp_theme' ) ); ?>
 					</div>
 
 					<?php

@@ -793,12 +793,12 @@ class WP_List_Table {
 		}
 
 		if ( $disable_last ) {
-			$page_links[] = '<span class="tablenav-pages-navspan" aria-hidden="true">&raquo;</span>';
+			$page_links[] = '<span class="tablenav-pages-navspan" aria-hidden="true"></span>';
 		} else {
 			$page_links[] = sprintf( "<a class='last-page' href='%s'><span class='screen-reader-text'>%s</span><span aria-hidden='true'>%s</span></a>",
 				esc_url( add_query_arg( 'paged', $total_pages, $current_url ) ),
 				__( 'Last page' ),
-				'&raquo;'
+				''
 			);
 		}
 

@@ -35,7 +35,7 @@ get_header(); ?>
 						'after'            => '</p></div>',
 						'next_or_number'   => 'number',
 						'separator'        => ' ',
-						'pagelink'         => __( '&raquo; Part %', 'test' ),
+						'pagelink'         => __( ' Part %', 'test' ),
 					)
 				);
 

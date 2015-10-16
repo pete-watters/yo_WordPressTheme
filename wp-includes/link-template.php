@@ -1851,7 +1851,7 @@ function previous_post_link( $format = '&laquo; %link', $link = '%title', $in_sa
  * @param string       $taxonomy       Optional. Taxonomy, if $in_same_term is true. Default 'category'.
  * @return string The link URL of the next post in relation to the current post.
  */
-function get_next_post_link( $format = '%link &raquo;', $link = '%title', $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ) {
+function get_next_post_link( $format = '%link ', $link = '%title', $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ) {
 	return get_adjacent_post_link( $format, $link, $in_same_term, $excluded_terms, false, $taxonomy );
 }
 
@@ -1867,7 +1867,7 @@ function get_next_post_link( $format = '%link &raquo;', $link = '%title', $in_sa
  * @param array|string $excluded_terms Optional. Array or comma-separated list of excluded term IDs.
  * @param string       $taxonomy       Optional. Taxonomy, if $in_same_term is true. Default 'category'.
  */
-function next_post_link( $format = '%link &raquo;', $link = '%title', $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ) {
+function next_post_link( $format = '%link ', $link = '%title', $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ) {
 	 echo get_next_post_link( $format, $link, $in_same_term, $excluded_terms, $taxonomy );
 }
 
@@ -2094,7 +2094,7 @@ function get_next_posts_link( $label = null, $max_page = 0 ) {
 	$nextpage = intval($paged) + 1;
 
 	if ( null === $label )
-		$label = __( 'Next Page &raquo;' );
+		$label = __( 'Next Page ' );
 
 	if ( !is_single() && ( $nextpage <= $max_page ) ) {
 		/**
@@ -2222,7 +2222,7 @@ function get_posts_nav_link( $args = array() ) {
 		$defaults = array(
 			'sep' => ' &#8212; ',
 			'prelabel' => __('&laquo; Previous Page'),
-			'nxtlabel' => __('Next Page &raquo;'),
+			'nxtlabel' => __('Next Page '),
 		);
 		$args = wp_parse_args( $args, $defaults );
 
@@ -2521,7 +2521,7 @@ function get_next_comments_link( $label = '', $max_page = 0 ) {
 		return;
 
 	if ( empty($label) )
-		$label = __('Newer Comments &raquo;');
+		$label = __('Newer Comments ');
 
 	/**
 	 * Filter the anchor tag attributes for the next comments page link.

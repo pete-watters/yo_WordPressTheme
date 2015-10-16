@@ -815,12 +815,12 @@ function _wp_render_title_tag() {
  * @global int       $page
  * @global int       $paged
  *
- * @param string $sep         Optional, default is '&raquo;'. How to separate the various items within the page title.
+ * @param string $sep         Optional, default is ''. How to separate the various items within the page title.
  * @param bool   $display     Optional, default is true. Whether to display or retrieve title.
  * @param string $seplocation Optional. Direction to display title, 'right'.
  * @return string|void String on retrieve.
  */
-function wp_title( $sep = '&raquo;', $display = true, $seplocation = '' ) {
+function wp_title( $sep = '', $display = true, $seplocation = '' ) {
 	global $wp_locale, $page, $paged;
 
 	$m = get_query_var('m');
@@ -1717,7 +1717,7 @@ function get_calendar($initial = true, $echo = true) {
 	$calendar_output .= "\n\t\t".'<td class="pad">&nbsp;</td>';
 
 	if ( $next ) {
-		$calendar_output .= "\n\t\t".'<td colspan="3" id="next"><a href="' . get_month_link($next->year, $next->month) . '">' . $wp_locale->get_month_abbrev($wp_locale->get_month($next->month)) . ' &raquo;</a></td>';
+		$calendar_output .= "\n\t\t".'<td colspan="3" id="next"><a href="' . get_month_link($next->year, $next->month) . '">' . $wp_locale->get_month_abbrev($wp_locale->get_month($next->month)) . ' </a></td>';
 	} else {
 		$calendar_output .= "\n\t\t".'<td colspan="3" id="next" class="pad">&nbsp;</td>';
 	}
@@ -2297,7 +2297,7 @@ function feed_links( $args = array() ) {
 
 	$defaults = array(
 		/* translators: Separator between blog name and feed type in feed links */
-		'separator'	=> _x('&raquo;', 'feed link'),
+		'separator'	=> _x('', 'feed link'),
 		/* translators: 1: blog title, 2: separator (raquo) */
 		'feedtitle'	=> __('%1$s %2$s Feed'),
 		/* translators: 1: blog title, 2: separator (raquo) */
@@ -2320,7 +2320,7 @@ function feed_links( $args = array() ) {
 function feed_links_extra( $args = array() ) {
 	$defaults = array(
 		/* translators: Separator between blog name and feed type in feed links */
-		'separator'   => _x('&raquo;', 'feed link'),
+		'separator'   => _x('', 'feed link'),
 		/* translators: 1: blog name, 2: separator(raquo), 3: post title */
 		'singletitle' => __('%1$s %2$s %3$s Comments Feed'),
 		/* translators: 1: blog name, 2: separator(raquo), 3: category name */
@@ -2765,7 +2765,7 @@ function paginate_links( $args = '' ) {
 		'show_all' => false,
 		'prev_next' => true,
 		'prev_text' => __('&laquo; Previous'),
-		'next_text' => __('Next &raquo;'),
+		'next_text' => __('Next '),
 		'end_size' => 1,
 		'mid_size' => 2,
 		'type' => 'plain',
