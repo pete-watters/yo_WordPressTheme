@@ -541,7 +541,7 @@ p.home-page-intro {
   width: 44px;
   border-radius: 4px;
 }
-.comment-content {
+.comment-content, .comment-body p {
   border: 1px solid #ddd;
   padding: 28px 28px 8px 28px;
   border-radius: 4px;
@@ -549,6 +549,8 @@ p.home-page-intro {
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.18);
   background-color: #fff;
 }
+
+
 .non-app.k-blog-holder .form_holder .comment-content p {
   padding: 0;
   color: #080c10;
