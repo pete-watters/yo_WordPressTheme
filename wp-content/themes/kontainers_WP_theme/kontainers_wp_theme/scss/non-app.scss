@@ -20,6 +20,9 @@ html {
 .non-app.home-page .brand_bar .bc_button {
   display: none;
 }
+.non-app .bc_navbar .nav {
+  float:none;
+}
 #pp-nav .bc_button, .non-app .brand_bar .bc_button {
   opacity: 1;
   -webkit-transition: all 0.5s cubic-bezier(.68, .07, .37, .94);
@@ -541,7 +544,7 @@ p.home-page-intro {
   width: 44px;
   border-radius: 4px;
 }
-.comment-content, .comment-body p {
+.comment-content,  .comment-body p {
   border: 1px solid #ddd;
   padding: 28px 28px 8px 28px;
   border-radius: 4px;
@@ -549,8 +552,6 @@ p.home-page-intro {
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.18);
   background-color: #fff;
 }
-
-
 .non-app.k-blog-holder .form_holder .comment-content p {
   padding: 0;
   color: #080c10;
@@ -699,6 +700,15 @@ p.home-page-intro {
 /* -------------------------------------------------------------------------------------------- */
 
 @media (max-width: 945px) {
+
+  .home-page-start, .non-app.k-blog-holder .form_holder {
+    background-image: url(../images/wp-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+  }
+
+
   .non-app .brand_bar .bc_button {
     opacity: 0;
   }
@@ -723,12 +733,29 @@ p.home-page-intro {
     font-size: 18px;
   }
 
+  /* new home */
+  p.home-page-intro {
+
+    padding: 8px 18px 38px 18px;
+
+  }
+  .home-page-start .content_holder {
+    top: calc(50% - 148px);
+  }
+
   /* blog*/
+  .non-app.k-blog-holder .form_holder .content_holder {
+    padding-top:28px;
+  }
+  .blog-nav {
+    margin: 28px 0 0px 0;
+  }
   .blog-nav input[type="search"] {
     margin-top: 12px;
   }
-  .non-app.home-page h1, .non-app.k-blog-holder h1 {
-    font-size: 38px;
+  .non-app.home-page h1, .non-app.k-blog-holder h1, .non-app.k-blog-holder h1 a {
+    font-size: 30px;
+    padding: 0 10px 0 10px;
   }
   .non-app.k-blog-holder .form_holder .post .widget_synved_social_share h2 {
     margin-top: 10px;
@@ -738,6 +765,29 @@ p.home-page-intro {
   }
   .widget_recent_entries {
     margin-bottom: 12px;
+  }
+  .blog-tel {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    color: rgba(0, 0, 0, 0);
+    z-index: 99999;
+  }
+  .blog-tel a {
+
+    color: rgba(0, 0, 0, 0);
+
+  }
+  .comment-respond {
+    padding: 18px;
+  }
+  .k-newsletter .widget_mc4wp_widget h2 {
+    padding: 14px 0 20px 0;
+    width: 100%;
+    margin-top: 18px;
+    border-top: 2px solid #000;
   }
 }
 

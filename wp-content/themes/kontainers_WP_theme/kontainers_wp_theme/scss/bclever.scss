@@ -605,7 +605,6 @@ app-home.css
   background-image: url(../images/svg_sprite.png);
   background-position: -117px -325px;
   background-size: 400px 2500px;
-
 }
 .btn-home.btn_watchVideo:after {
   background-position: -49px -325px;
@@ -682,7 +681,106 @@ app-home.css
   margin-left: -28px;
   z-index: 9;
 }
-
+/* country selector */
+.country-selector {
+  padding: 9px 12px;
+  border-right: 1px solid rgba(0,0,0,0.2);
+  margin: 0px 8px 0 0;
+  display: block;
+  float: left;
+}
+.country-selector span {
+  border: none;
+  padding: 2px 0px 0px 0px;
+  margin: 0;
+  color: rgba(255,255,255,0.8);
+  font: 14px "bclever_font_medium", tahoma, sans-serif;
+  float: left;
+}
+.current-USA .UK-label, .current-UK .USA-label {
+  display: none;
+}
+.country-selector:after {
+  content: "";
+  height: 22px;
+  width: 22px;
+  background: url(../images/svg_sprite.png) no-repeat;
+  background-size: 400px 2500px;
+  margin: 1px -4px 0px 4px;
+  background-position: -286px -194px;
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  display: inline-block;
+  float: right;
+}
+.country-selector ul {
+  background-color: rgba(0, 0, 0, 0.48);
+  display: block;
+  padding: 0;
+  z-index: 999;
+  width: auto;
+  margin: 32px 0 0 -12px;
+  overflow: hidden;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: all .38s ease-in-out;
+  -moz-transition: all .38s ease-in-out;
+  -o-transition: all .38s ease-in-out;
+  -ms-transition: all .38s ease-in-out;
+  transition: all .38s ease-in-out;
+  position: absolute;
+}
+.country-selector:hover {
+  cursor: pointer;
+}
+.country-selector.show-items ul {
+  opacity: 1;
+  max-height: 9999px;
+}
+.country-selector ul li {
+  display: block;
+}
+.country-selector ul li a {
+  color: #fff;
+  border-top: 1px solid #333;
+  width: 100%;
+  padding: 10px 26px 10px 52px;
+  display: inline-block;
+  font: 14px "bclever_font_medium", tahoma, sans-serif;
+}
+.country-selector ul li a:hover {
+  background: #2ba6b3;
+}
+.country-selector ul li:first-of-type a {
+  border-top: none;
+}
+.country-selector ul li:before {
+  content: "";
+  position: absolute;
+}
+.current-flag, .country-selector ul li:before {
+  height: 18px;
+  width: 27px;
+  display: block;
+  background: url(../images/svg_sprite.png) no-repeat;
+  margin: 3px 10px 0 0;
+  background-size: 400px 2500px;
+  float: left;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.28);
+  border-radius: 2px;
+}
+.country-selector ul li:before {
+  margin: 11px 10px 0 12px;
+}
+.current-USA .current-flag, .country-selector ul li.USA-select:before {
+  background-position: -53px -564px;
+}
+.current-UK .current-flag, .country-selector ul li.UK-select:before {
+  background-position: -17px -564px;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 modals.css
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1501,7 +1599,7 @@ input[type=range]::-ms-track {
 .bclever-modal .form-group.field_date input[type="text"], .bclever-modal .form-group.field_time input[type="text"] {
   width: 155px;
   border: none;
-  border:10px solid red;
+  border: 10px solid red;
 }
 .darkerPanel .form-group label {
   color: #EEE;
@@ -2255,9 +2353,9 @@ table.resultsTable td.quote.with-breakdown:hover .bc-breakdown .row {
 .bc-breakdown:before {
   content: "";
   border: solid 18px #222;
-  border-top-color: rgba(0, 0, 0, 0) ;
-  border-bottom-color: rgba(0, 0, 0, 0) ;
-  border-right-color: rgba(0, 0, 0, 0) ;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-right-color: rgba(0, 0, 0, 0);
   top: 42px;
   position: absolute;
   margin-left: 188px;
@@ -4470,7 +4568,6 @@ table.resultsTable tbody tr td.companyName.quickest:before, table.resultsTable t
   -ms-transform: scale(.88);
   transform: scale(.88);
 }
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app-dash.css
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -5001,7 +5098,6 @@ input[type="text"].search-orders, input[type="text"].search-orders:focus {
 .order-action-panel .order-pending p {
   max-width: 800px;
 }
-
 /* View Files & Docs */
 .bclever-modal.bc_view-docs_modal {
   margin-left: -275px;
@@ -6496,12 +6592,6 @@ app-bol.css
   -webkit-transform: rotate(-7deg);
   transform: rotate(-7deg);
 }
-
-
-
-
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 aux-pages.css
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -6632,6 +6722,10 @@ p.how-it-works-intro {
 .btn_signin-register {
   margin-top: 16px;
   padding-left: 43px;
+}
+.bc_navbar .nav {
+  display: block;
+  float: right;
 }
 .bc_navbar .nav ul li a:before {
   content: "";
@@ -6890,7 +6984,7 @@ Contact us
 .form_holder.contact-us .four:first-of-type {
   border-left: none;
 }
-.form_holder.contact-us .page-holder, .form_holder.who-we-are .page-holder, .media-kit .page-holder, .who-we-are .page-holder  {
+.form_holder.contact-us .page-holder, .form_holder.who-we-are .page-holder, .media-kit .page-holder, .who-we-are .page-holder {
   border: none;
   padding: 18px 0px 8px 0px;
 }
@@ -7112,7 +7206,6 @@ ul.team-members-list li:hover .btn-linkedIn {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-
 .who-we-are .content_holder {
   min-height: calc(100% - 84px);
 }
@@ -7681,6 +7774,9 @@ responsive.css
     width: 214px;
     background-image: url(../images/ribbon.png);
   }
+  .ribbon-conf.US-version {
+    background-image: url(../images/ribbon-US.png);
+  }
   .nav ul li.btn_logout a:before {
     left: 0px;
   }
@@ -8040,10 +8136,13 @@ responsive.css
     padding: 0 18px 0 10px;
     right: 0px;
   }
+  .bc_navbar .nav{
+    width: 100%;
+  }
   .bc_navbar .nav ul {
     width: 100%;
     margin-right: 0;
-    min-width: 320px;
+
   }
   .bc_navbar .nav ul li {
     clear: both;
@@ -8061,6 +8160,29 @@ responsive.css
   .bc_navbar .nav ul li a:before {
     top: 2px;
   }
+  .country-selector {
+    position:fixed;
+    display:none;
+  }
+  .bc_navbar.open-nav .country-selector {
+    display:block;
+  }
+
+  .country-selector ul {
+    display: block;
+    min-width: 300px;
+    margin: -7px 0 0 -12px;
+    background-color: #000;
+  }
+  .country-selector ul li {
+    float: left;
+    clear: none;
+    display: inline-block;
+  }
+  .country-selector ul li a {
+    border-top: none;
+  }
+
   /* hamburger button animate to close*/
   #nav-toggle {
     cursor: pointer;
@@ -8943,12 +9065,12 @@ responsive.css
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
-  .flipper-panel {
+  .home_holder .flipper-panel {
     width: 100%;
     margin-top: 30px;
   }
   .home_holder a.bclever_logo {
-    top: 68px; /* needs forcing to overide height media queries*/
+    top: 48px; /* needs forcing to overide height media queries*/
   }
   .form_holder.contact-us .primary-contact, .our-values {
     border-radius: 0px;
@@ -9038,6 +9160,7 @@ responsive.css
     margin: 0 auto;
   }
 }
+
 /* -------------------------------------------------------------------------------------------- */
 /* ---------------------reposition elements when height is short------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
@@ -9046,6 +9169,7 @@ responsive.css
     margin-top: -20px;
   }
 }
+
 @media screen and (min-width: 1024px) and (max-height: 640px) {
   .partner-logos, .quote-animator {
     display: none;
@@ -9061,6 +9185,7 @@ responsive.css
     bottom: 55px;
   }
 }
+
 /* -------------------------------------------------------------------------------------------- */
 /* ---------------------reposition elements when height is big------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
