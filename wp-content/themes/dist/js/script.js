@@ -1,1 +1,0 @@
-/*! Hyperion - v0.0.1 */"use strict";jQuery(document).ready(function(){});var APP=function(a,b){return a.init=function(){var a=0;console.log(a,b)},a}(APP||{},jQuery);jQuery(document).ready(APP.init);

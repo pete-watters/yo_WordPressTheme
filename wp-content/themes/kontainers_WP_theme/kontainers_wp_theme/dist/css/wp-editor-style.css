@@ -1431,6 +1431,122 @@ app-home.css
   z-index: 9;
 }
 
+/* country selector */
+.country-selector {
+  padding: 9px 12px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0px 8px 0 0;
+  display: block;
+  float: left;
+}
+
+.country-selector span {
+  border: none;
+  padding: 2px 0px 0px 0px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font: 14px "bclever_font_medium", tahoma, sans-serif;
+  float: left;
+}
+
+.current-USA .UK-label, .current-UK .USA-label {
+  display: none;
+}
+
+.country-selector:after {
+  content: "";
+  height: 22px;
+  width: 22px;
+  background: url(../images/svg_sprite.png) no-repeat;
+  background-size: 400px 2500px;
+  margin: 1px -4px 0px 4px;
+  background-position: -286px -194px;
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  display: inline-block;
+  float: right;
+}
+
+.country-selector ul {
+  background-color: rgba(0, 0, 0, 0.48);
+  display: block;
+  padding: 0;
+  z-index: 999;
+  width: auto;
+  margin: 32px 0 0 -12px;
+  overflow: hidden;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: all .38s ease-in-out;
+  -moz-transition: all .38s ease-in-out;
+  -o-transition: all .38s ease-in-out;
+  -ms-transition: all .38s ease-in-out;
+  transition: all .38s ease-in-out;
+  position: absolute;
+}
+
+.country-selector:hover {
+  cursor: pointer;
+}
+
+.country-selector.show-items ul {
+  opacity: 1;
+  max-height: 9999px;
+}
+
+.country-selector ul li {
+  display: block;
+}
+
+.country-selector ul li a {
+  color: #fff;
+  border-top: 1px solid #333;
+  width: 100%;
+  padding: 10px 26px 10px 52px;
+  display: inline-block;
+  font: 14px "bclever_font_medium", tahoma, sans-serif;
+}
+
+.country-selector ul li a:hover {
+  background: #2ba6b3;
+}
+
+.country-selector ul li:first-of-type a {
+  border-top: none;
+}
+
+.country-selector ul li:before {
+  content: "";
+  position: absolute;
+}
+
+.current-flag, .country-selector ul li:before {
+  height: 18px;
+  width: 27px;
+  display: block;
+  background: url(../images/svg_sprite.png) no-repeat;
+  margin: 3px 10px 0 0;
+  background-size: 400px 2500px;
+  float: left;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.28);
+  border-radius: 2px;
+}
+
+.country-selector ul li:before {
+  margin: 11px 10px 0 12px;
+}
+
+.current-USA .current-flag, .country-selector ul li.USA-select:before {
+  background-position: -53px -564px;
+}
+
+.current-UK .current-flag, .country-selector ul li.UK-select:before {
+  background-position: -17px -564px;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 modals.css
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -8305,6 +8421,11 @@ p.how-it-works-intro {
   padding-left: 43px;
 }
 
+.bc_navbar .nav {
+  display: block;
+  float: right;
+}
+
 .bc_navbar .nav ul li a:before {
   content: "";
   display: inline-block;
@@ -9504,6 +9625,10 @@ responsive.css
     background-image: url(../images/ribbon.png);
   }
 
+  .ribbon-conf.US-version {
+    background-image: url(../images/ribbon-US.png);
+  }
+
   .nav ul li.btn_logout a:before {
     left: 0px;
   }
@@ -9893,10 +10018,13 @@ responsive.css
     right: 0px;
   }
 
+  .bc_navbar .nav {
+    width: 100%;
+  }
+
   .bc_navbar .nav ul {
     width: 100%;
     margin-right: 0;
-    min-width: 320px;
   }
 
   .bc_navbar .nav ul li {
@@ -9916,6 +10044,32 @@ responsive.css
 
   .bc_navbar .nav ul li a:before {
     top: 2px;
+  }
+
+  .country-selector {
+    position: fixed;
+    display: none;
+  }
+
+  .bc_navbar.open-nav .country-selector {
+    display: block;
+  }
+
+  .country-selector ul {
+    display: block;
+    min-width: 300px;
+    margin: -7px 0 0 -12px;
+    background-color: #000;
+  }
+
+  .country-selector ul li {
+    float: left;
+    clear: none;
+    display: inline-block;
+  }
+
+  .country-selector ul li a {
+    border-top: none;
   }
 
   /* hamburger button animate to close*/
@@ -11013,13 +11167,13 @@ responsive.css
     border-bottom-right-radius: 8px;
   }
 
-  .flipper-panel {
+  .home_holder .flipper-panel {
     width: 100%;
     margin-top: 30px;
   }
 
   .home_holder a.bclever_logo {
-    top: 68px;
+    top: 48px;
     /* needs forcing to overide height media queries*/
   }
 
@@ -11224,6 +11378,10 @@ html {
 /* Hide button on homepage coz that's revealed on slide 2 */
 .non-app.home-page .brand_bar .bc_button {
   display: none;
+}
+
+.non-app .bc_navbar .nav {
+  float: none;
 }
 
 #pp-nav .bc_button, .non-app .brand_bar .bc_button {
@@ -11823,7 +11981,7 @@ p.home-page-intro {
   border-radius: 4px;
 }
 
-.comment-content {
+.comment-content, .comment-body p {
   border: 1px solid #ddd;
   padding: 28px 28px 8px 28px;
   border-radius: 4px;
@@ -11992,6 +12150,13 @@ p.home-page-intro {
 /* ----------------------------------------MOBILE--------------------------------------------- */
 /* -------------------------------------------------------------------------------------------- */
 @media (max-width: 945px) {
+  .home-page-start, .non-app.k-blog-holder .form_holder {
+    background-image: url(../images/wp-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+  }
+
   .non-app .brand_bar .bc_button {
     opacity: 0;
   }
@@ -12020,13 +12185,31 @@ p.home-page-intro {
     font-size: 18px;
   }
 
+  /* new home */
+  p.home-page-intro {
+    padding: 8px 18px 38px 18px;
+  }
+
+  .home-page-start .content_holder {
+    top: calc(50% - 148px);
+  }
+
   /* blog*/
+  .non-app.k-blog-holder .form_holder .content_holder {
+    padding-top: 28px;
+  }
+
+  .blog-nav {
+    margin: 28px 0 0px 0;
+  }
+
   .blog-nav input[type="search"] {
     margin-top: 12px;
   }
 
-  .non-app.home-page h1, .non-app.k-blog-holder h1 {
-    font-size: 38px;
+  .non-app.home-page h1, .non-app.k-blog-holder h1, .non-app.k-blog-holder h1 a {
+    font-size: 30px;
+    padding: 0 10px 0 10px;
   }
 
   .non-app.k-blog-holder .form_holder .post .widget_synved_social_share h2 {
@@ -12039,6 +12222,31 @@ p.home-page-intro {
 
   .widget_recent_entries {
     margin-bottom: 12px;
+  }
+
+  .blog-tel {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    color: transparent;
+    z-index: 99999;
+  }
+
+  .blog-tel a {
+    color: transparent;
+  }
+
+  .comment-respond {
+    padding: 18px;
+  }
+
+  .k-newsletter .widget_mc4wp_widget h2 {
+    padding: 14px 0 20px 0;
+    width: 100%;
+    margin-top: 18px;
+    border-top: 2px solid #000;
   }
 }
 /* -------------------------------------------------------------------------------------------- */

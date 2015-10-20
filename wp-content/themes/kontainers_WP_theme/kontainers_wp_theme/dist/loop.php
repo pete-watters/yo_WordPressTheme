@@ -37,7 +37,7 @@
 
 		<?php else : ?>
 
-			<?php the_content( __( 'Continue reading &raquo', 'kontainers_wp_theme' ) ); ?>
+			<?php the_content( __( 'Continue reading', 'kontainers_wp_theme' ) ); ?>
 
 		<?php endif; ?>
 
@@ -60,5 +60,13 @@
 		<?php kontainers_wp_theme_post_meta(); ?>
 
 	</footer>
+
+	<aside class="widget widget_synved_social_share">
+		<h2 class="widget-title">Sharing</h2>
+		<div>
+			<?php if (function_exists('synved_social_share_markup')) echo synved_social_share_markup(); ?>
+		</div>
+	</aside>
+
 
 </article>

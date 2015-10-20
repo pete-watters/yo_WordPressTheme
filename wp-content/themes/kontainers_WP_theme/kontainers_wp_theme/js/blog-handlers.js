@@ -153,4 +153,8 @@ $(document).ready(function(){
 			document.getElementById('video-holder').innerHTML = '';
 		}, setTimeout(t, 888)
 	});
+	// hack to wrap comment contents with a container div
+	//$(".comment-body p").wrapAll( "<div class='comment-content'></div>" );
+	//$(".comment-body").find("p").wrapAll( "<div class='comment-content'></div>" );
+	$(".comment-body p").children().contents().unwrap();
 });

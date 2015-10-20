@@ -74,7 +74,7 @@ get_header(); ?>
 
 						<?php
 						if ( comments_open() || get_comments_number() > 0 ) :
-							comments_template( '', true );
+							comments_template( 'kontainers-comment-template.php');
 						endif;
 						?>
 

@@ -41,7 +41,7 @@
  
 	<?php foreach ($comments as $comment) : ?>
 <!-- Start Your trackback Code -->
-		<li <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
+		<li <?php echo $oddcomment; ?>id="SS comment-<?php comment_ID() ?>">
 			<?php comment_author_link() ?>
 			<?php if ($comment->comment_approved == '0') : ?>
 			<em>Your comment is awaiting moderation.</em>

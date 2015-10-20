@@ -37,7 +37,7 @@
 
 		<?php else : ?>
 
-			<?php the_content( __( 'Continue reading &raquo', 'kontainers_wp_theme' ) ); ?>
+			<?php the_content( __( 'Continue reading', 'kontainers_wp_theme' ) ); ?>
 
 		<?php endif; ?>
 
