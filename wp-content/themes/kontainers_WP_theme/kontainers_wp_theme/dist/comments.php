@@ -43,6 +43,7 @@
 						'style'       => 'ol',
 						'short_ping'  => true,
 						'avatar_size' => 34,
+						'format' => 'html5'
 					)
 				);
 			?>

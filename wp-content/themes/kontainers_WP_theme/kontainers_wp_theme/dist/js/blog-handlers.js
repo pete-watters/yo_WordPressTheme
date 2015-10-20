@@ -156,5 +156,5 @@ $(document).ready(function(){
 	// hack to wrap comment contents with a container div
 	//$(".comment-body p").wrapAll( "<div class='comment-content'></div>" );
 	//$(".comment-body").find("p").wrapAll( "<div class='comment-content'></div>" );
-	$(".comment-body p").children().contents().unwrap();
+	//$(".comment-body p").children().contents().unwrap();
 });

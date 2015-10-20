@@ -11710,9 +11710,16 @@ p.home-page-intro {
 
 .k-newsletter .mc4wp-form {
   float: left;
+  margin: 0;
 }
 
 .k-newsletter .mc4wp-form p {
+  float: left;
+}
+
+.k-newsletter .mc4wp-success {
+  margin: -70px 0 0 0;
+  display: block;
   float: left;
 }
 
@@ -11981,7 +11988,7 @@ p.home-page-intro {
   border-radius: 4px;
 }
 
-.comment-content, .comment-body p {
+.comment-content {
   border: 1px solid #ddd;
   padding: 28px 28px 8px 28px;
   border-radius: 4px;
@@ -12205,6 +12212,15 @@ p.home-page-intro {
 
   .blog-nav input[type="search"] {
     margin-top: 12px;
+  }
+
+  .widget_synved_social_share {
+    /* hide on homepage*/
+    display: none;
+  }
+
+  .single-post .widget_synved_social_share {
+    display: block;
   }
 
   .non-app.home-page h1, .non-app.k-blog-holder h1, .non-app.k-blog-holder h1 a {
