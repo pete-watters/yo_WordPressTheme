@@ -690,12 +690,16 @@ app-home.css
   float: left;
 }
 .country-selector span {
-  border: none;
-  padding: 2px 0px 0px 0px;
-  margin: 0;
-  color: rgba(255,255,255,0.8);
-  font: 14px "bclever_font_medium", tahoma, sans-serif;
-  float: left;
+  /*border: none;
+	padding: 2px 0px 0px 0px;
+	margin: 0;
+	color: rgba(255,255,255,0.8);
+	font: 14px "bclever_font_medium", tahoma, sans-serif;
+	float: left;
+	Hidden to keep width fixed
+	*/
+
+  display: none;
 }
 .current-USA .UK-label, .current-UK .USA-label {
   display: none;
@@ -706,7 +710,7 @@ app-home.css
   width: 22px;
   background: url(../images/svg_sprite.png) no-repeat;
   background-size: 400px 2500px;
-  margin: 1px -4px 0px 4px;
+  margin: 1px -4px 0px -4px;
   background-position: -286px -194px;
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -6647,7 +6651,7 @@ How it works
   margin: 7px 9px 0 0;
   display: inline-block;
 }
-.how-it-works .form_holder .content_holder {
+.how-it-works .form_holder .content_holder  {
   margin: 0px auto 0px auto;
   min-height: auto;
 }
@@ -6678,9 +6682,11 @@ p.how-it-works-intro {
   margin-top: 93px;
   padding-top: 68px;
 }
-.how-it-works .form_holder .dashboard-steps p {
+.how-it-works .form_holder .dashboard-steps p
+{
   color: #333;
 }
+
 .dashboard-steps.darker-row {
   background-color: #eee;
 }
@@ -6805,10 +6811,20 @@ p.how-it-works-intro {
 .anotation p {
   display: block;
   float: right;
-  color: #F4C000;
   margin-top: -11px;
   font-size: 14px;
 }
+.how-it-works .form_holder .dashboard-steps .anotation p
+{
+  color: #d6ac0f;
+}
+.how-it-works .form_holder .anotation p
+{
+  color: #F4C000;
+}
+
+
+
 .anotation.home-image-a {
   border-left: 1px solid #F4C000;
   border-top: 1px solid #F4C000;
@@ -6843,10 +6859,10 @@ p.how-it-works-intro {
   position: absolute;
   margin: 266px 0 0 -160px;
 }
-.anotation.selector-image-a p {
+.how-it-works .form_holder .anotation.selector-image-a p {
   float: left;
   margin-top: -21px;
-  color: #d6ac0f;
+
 }
 .quotes-image {
   height: 463px;
@@ -6938,14 +6954,14 @@ p.how-it-works-intro {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Contact us
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.form_holder.contact-us h2 {
+.contact-us h2 {
   border: none;
   font: 20px "bclever_font_medium", tahoma, sans-serif;
   text-align: center;
   margin-bottom: 0;
   margin-top: 14px;
 }
-.form_holder.contact-us .offices .four {
+.contact-us .offices .four {
   text-align: center;
   border-left: 1px solid #ddd;
   padding-bottom: 12px;
@@ -6955,13 +6971,13 @@ Contact us
   background: -ms-linear-gradient(top, rgba(242,242,242,1) 0%, rgba(252,252,252,0) 2%);
   background: linear-gradient(to bottom, rgba(242,242,242,1) 0%, rgba(252,252,252,0) 2%);
 }
-.form_holder.contact-us .offices h1 {
+.contact-us .offices h1 {
   border-bottom: 1px solid #ddd;
   padding-bottom: 30px;
   margin-bottom: 0px;
   font-size: 30px;
 }
-.form_holder.contact-us .primary-contact, .our-values {
+.contact-us .primary-contact, .our-values {
   border-radius: 8px;
   background: #333;
   background: -moz-linear-gradient(top, #444 0%, #111 100%);
@@ -6976,22 +6992,22 @@ Contact us
   color: #fff;
   text-shadow: #000 0px 2px 0px;
 }
-.form_holder.contact-us .primary-contact .four {
+.contact-us .primary-contact .four {
   text-align: center;
   padding: 48px 0;
   border-left: 1px solid #444;
 }
-.form_holder.contact-us .four:first-of-type {
+.contact-us .four:first-of-type {
   border-left: none;
 }
-.form_holder.contact-us .page-holder, .form_holder.who-we-are .page-holder, .media-kit .page-holder, .who-we-are .page-holder {
+.contact-us .page-holder, .form_holder.who-we-are .page-holder, .media-kit .page-holder, .who-we-are .page-holder {
   border: none;
   padding: 18px 0px 8px 0px;
 }
 .form_holder h1 {
   font-size: 38px;
 }
-.form_holder.contact-us .page-holder .twelve {
+.contact-us .page-holder .twelve {
   text-align: center;
   padding: 48px 0 0 0;
 }
@@ -9072,12 +9088,12 @@ responsive.css
   .home_holder a.bclever_logo {
     top: 48px; /* needs forcing to overide height media queries*/
   }
-  .form_holder.contact-us .primary-contact, .our-values {
+  .contact-us .primary-contact, .our-values {
     border-radius: 0px;
     margin: 0;
     text-align: center;
   }
-  .form_holder.contact-us .primary-contact .four {
+  .contact-us .primary-contact .four {
     border: none;
     border-bottom: 1px solid #444;
     padding: 28px 0 28px 0;

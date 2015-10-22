@@ -95,26 +95,26 @@ html {
 }
 
 /* IF WE HAVE AUX LINKS IN MENU*/
-.bc_navbar .nav ul li.k-menu-faq, .bc_navbar .nav ul li.k-menu-terms, .bc_navbar .nav ul li.k-menu-cookies {
+.bc_navbar .nav ul li.k-menu-faq, .bc_navbar .nav ul li.k-menu-terms, .bc_navbar .nav ul li.k-menu-cookie {
   border-top:none;
 }
 .bc_navbar .nav ul li.k-menu-faq {
   border-top: 1px solid #333;
   padding-top:10px;
 }
-.bc_navbar .nav ul li.k-menu-cookies {
+.bc_navbar .nav ul li.k-menu-cookie {
   padding-bottom:10px;
 }
-.bc_navbar .nav ul li.k-menu-faq a, .bc_navbar .nav ul li.k-menu-terms a, .bc_navbar .nav ul li.k-menu-cookies a {
+.bc_navbar .nav ul li.k-menu-faq a, .bc_navbar .nav ul li.k-menu-terms a, .bc_navbar .nav ul li.k-menu-cookie a {
   font-size: 12px;
   color:rgba(255,255,255,0.38);
   padding: 4px 8px 4px 14px;
 }
-.bc_navbar .nav ul li.k-menu-faq a:hover, .bc_navbar .nav ul li.k-menu-terms a:hover, .bc_navbar .nav ul li.k-menu-cookies a:hover {
+.bc_navbar .nav ul li.k-menu-faq a:hover, .bc_navbar .nav ul li.k-menu-terms a:hover, .bc_navbar .nav ul li.k-menu-cookie a:hover {
   background-color:transparent;
   color:#fff;
 }
-.bc_navbar .nav ul li.k-menu-faq a:before, .bc_navbar .nav ul li.k-menu-terms a:before, .bc_navbar .nav ul li.k-menu-cookies a:before {
+.bc_navbar .nav ul li.k-menu-faq a:before, .bc_navbar .nav ul li.k-menu-terms a:before, .bc_navbar .nav ul li.k-menu-cookie a:before {
   display:none;
 }
 /* /IF WE HAVE AUX LINKS IN MENU*/
@@ -188,12 +188,26 @@ html {
   background-color: #010206;
 
 }
-.non-app.home-page #pagepiling section {
-  background-color: #010206;
-  /* remove when pagepiling works*/
+.non-app.home-page #fullpage.piling section {
+
   height: 100%;
   position: absolute;
   width: 100%;
+}
+/* --------------------------- */
+/* remove when pagepiling works*/
+/* --------------------------- */
+.non-app.home-page #fullpage section {
+
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+/* --------------------------- */
+/* /remove when pagepiling works*/
+/* --------------------------- */
+.non-app.home-page #fullpage.full section {
+  position: relative;
 }
 .non-app.home-page .pp-section h2 {
   text-align: left;
@@ -205,7 +219,7 @@ html {
 .non-app.home-page h1, .non-app.k-blog-holder h1 {
   padding-right: 8px;
   font-size: 55px;
-  color: #fff;
+  /*color: #fff;*/
   color: #eac033;
   text-shadow: rgba(0,0,0,0.3) 0px 0px 4px;
   font: 55px "bclever_font_medium", tahoma, sans-serif;
@@ -392,6 +406,8 @@ p.home-page-intro {
   color: #fff;
   padding: 8px 38px 8px 12px;
   border-radius: 4px;
+  display: inline-block;
+  margin: 18px 0;
 }
 .more-link:hover {
   background-color: #1d909c;
@@ -420,12 +436,18 @@ p.home-page-intro {
   display: none;
 }
 .blog-nav {
-  background-color: rgba(0,0,0,0.38);
+  /*background-color: rgba(0,0,0,0.38);
   padding: 18px;
   border-radius: 4px;
   position: relative;
   width: 100%;
   margin: 48px 0 18px 0;
+  hide until we have enough blogs for search and categories
+  */
+
+  opacity: 0;
+  margin-bottom: -78px;
+  pointer-events: none;
 }
 .blog-nav form {
   margin: 0;
@@ -524,6 +546,14 @@ p.home-page-intro {
 .post-content h3 {
   color: rgba(0,0,0,0.8);
   font-size: 28px;
+}
+.non-app.k-blog-holder .widget_synved_social_share {
+  /* hide on homepage*/
+  display:none;
+}
+
+.single-post .non-app.k-blog-holder .widget_synved_social_share {
+  display:block;
 }
 /* comments */
 .non-app.k-blog-holder .comments-area h2 {
@@ -759,14 +789,7 @@ p.home-page-intro {
   .blog-nav input[type="search"] {
     margin-top: 12px;
   }
-  .widget_synved_social_share {
-    /* hide on homepage*/
-    display:none;
-  }
 
-  .single-post .widget_synved_social_share {
-    display:block;
-  }
 
   .non-app.home-page h1, .non-app.k-blog-holder h1, .non-app.k-blog-holder h1 a {
     font-size: 30px;
