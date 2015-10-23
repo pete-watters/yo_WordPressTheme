@@ -45,7 +45,7 @@ if (fnmatch('* kontainers.com?locale=gb', $serverHost)) {
 
                                     <div class="four columns">
                                         <div class="contact-action action-chat">
-                                            <strong>Chat</strong> <a>Start Live Chat</a>
+                                            <strong>Chat</strong> <a onclick="Intercom('showMessages')">Start Live Chat</a>
                                         </div>
                                     </div>
 
