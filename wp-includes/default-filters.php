@@ -327,6 +327,10 @@ add_filter( 'authenticate', 'wp_authenticate_spam_check',         99    );
 add_filter( 'determine_current_user', 'wp_validate_auth_cookie'          );
 add_filter( 'determine_current_user', 'wp_validate_logged_in_cookie', 20 );
 
+add_filter('user_can_richedit' , create_function('' , 'return false;') , 50);
+
+
+
 // Split term updates.
 add_action( 'admin_init',        '_wp_check_for_scheduled_split_terms' );
 add_action( 'split_shared_term', '_wp_check_split_default_terms',  10, 4 );
