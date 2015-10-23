@@ -16,7 +16,7 @@ $currentPage_class = "contact-us";
 
 // get URL
 $serverHost = $_SERVER['HTTP_HOST'] ;
-if (fnmatch('*kontainers.co.uk', $serverHost)) {
+if (fnmatch('* kontainers.com?locale=gb', $serverHost)) {
     // .co.uk domain
     $phone_number = get_post_meta($post->ID, "kontainers_uk_phone", true);
     $contact_email = get_post_meta($post->ID, "kontainers_uk_email", true);
@@ -27,17 +27,17 @@ if (fnmatch('*kontainers.co.uk', $serverHost)) {
 }
 ?>
 <!--  This holds the WP page Content -  -->
-<div class="non-app <?php echo $currentPage_class?>">
+<div class="non-app">
     <!--  Top bar with nav -->
     <?php include('top-nav.php') ?>
 
     <!--  form_holder - holds scrolling content -->
-    <div class="form_holder">
+    <div class="form_holder contact-us">
         <!--  conent_holder - positions content -->
         <div class="content_holder">
             <section class="page-content primary" role="main">
                 <article class="post">
-                    <div class="row ">
+                    <div class="row">
                         <div class="twelve columns">
                             <h1>Get in touch</h1>
                             <div class="page-holder">

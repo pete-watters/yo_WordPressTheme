@@ -12,7 +12,7 @@
 
 
 		<!--  Piled content - homepage slides transitioned by scroll-->
-		<div id="pagepiling">
+		<div id="fullpage">
 			<section class="section home-page-start" id="section1">
 				<div class="content_holder">
 					<h1><?php echo get_post_meta($post->ID, "kontainers_home_h1", true); ?></h1>

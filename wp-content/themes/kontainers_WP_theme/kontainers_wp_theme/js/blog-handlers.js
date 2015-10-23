@@ -78,19 +78,7 @@ $(document).ready(function(){
 		$('.bclever-modal').removeClass('bclever-modal-open');
 	});
 
-	<!-- demo - go to url after delay -->
-	$('.action_goToUrl').click(function(e){
 
-		$('html').removeClass('bc_page_loaded').addClass('bc_page_loading');
-
-		var t = function () {
-			window.location.href = 'map.html';
-			//If you wanted to change the page without it reflecting in the browser back history
-			//window.location.replace('...');
-			e.preventDefault();
-		}
-		setTimeout(t, 2888);
-	});
 
 	<!-- demo - go to url after delay -->
 	$('.action_goTo-how-it-works').click(function(e){
@@ -110,10 +98,15 @@ $(document).ready(function(){
 	$('.action_goToApp').click(function(e){
 		$('html').removeClass('bc_page_loaded').addClass('bc_page_loading');
 
-		var t = function () {
-			window.location.href = 'https://kontainers.co.uk/?quotePanel=true';
-		}
-		setTimeout(t, 2888);
+			var localeValue = location.search.split('locale=').splice(1).join('').split('&')[0];
+			if(localeValue != "gb"){
+				localeValue = "us"
+			}
+			window.location.href = 'https://kontainers.io/?locale=' + localeValue+ '&quotePanel=true';
+			//var url = 'https://kontainers.io/?locale=' + localeValue+ '&quotePanel=true';
+			//var win = window.open(url, '_blank');
+			//win.focus();
+
 	});
 	$('.k-menu-quotes a').click(function(e){
 			e.preventDefault();
@@ -153,8 +146,4 @@ $(document).ready(function(){
 			document.getElementById('video-holder').innerHTML = '';
 		}, setTimeout(t, 888)
 	});
-	// hack to wrap comment contents with a container div
-	//$(".comment-body p").wrapAll( "<div class='comment-content'></div>" );
-	//$(".comment-body").find("p").wrapAll( "<div class='comment-content'></div>" );
-	//$(".comment-body p").children().contents().unwrap();
 });

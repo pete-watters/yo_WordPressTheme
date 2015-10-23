@@ -1441,12 +1441,15 @@ app-home.css
 }
 
 .country-selector span {
-  border: none;
-  padding: 2px 0px 0px 0px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.8);
-  font: 14px "bclever_font_medium", tahoma, sans-serif;
-  float: left;
+  /*border: none;
+	padding: 2px 0px 0px 0px;
+	margin: 0;
+	color: rgba(255,255,255,0.8);
+	font: 14px "bclever_font_medium", tahoma, sans-serif;
+	float: left;
+	Hidden to keep width fixed
+	*/
+  display: none;
 }
 
 .current-USA .UK-label, .current-UK .USA-label {
@@ -1459,7 +1462,7 @@ app-home.css
   width: 22px;
   background: url(../images/svg_sprite.png) no-repeat;
   background-size: 400px 2500px;
-  margin: 1px -4px 0px 4px;
+  margin: 1px -4px 0px -4px;
   background-position: -286px -194px;
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -8514,9 +8517,16 @@ p.how-it-works-intro {
 .anotation p {
   display: block;
   float: right;
-  color: #F4C000;
   margin-top: -11px;
   font-size: 14px;
+}
+
+.how-it-works .form_holder .dashboard-steps .anotation p {
+  color: #d6ac0f;
+}
+
+.how-it-works .form_holder .anotation p {
+  color: #F4C000;
 }
 
 .anotation.home-image-a {
@@ -8558,10 +8568,9 @@ p.how-it-works-intro {
   margin: 266px 0 0 -160px;
 }
 
-.anotation.selector-image-a p {
+.how-it-works .form_holder .anotation.selector-image-a p {
   float: left;
   margin-top: -21px;
-  color: #d6ac0f;
 }
 
 .quotes-image {
@@ -8669,7 +8678,7 @@ p.how-it-works-intro {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Contact us
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.form_holder.contact-us h2 {
+.contact-us h2 {
   border: none;
   font: 20px "bclever_font_medium", tahoma, sans-serif;
   text-align: center;
@@ -8677,7 +8686,7 @@ Contact us
   margin-top: 14px;
 }
 
-.form_holder.contact-us .offices .four {
+.contact-us .offices .four {
   text-align: center;
   border-left: 1px solid #ddd;
   padding-bottom: 12px;
@@ -8688,14 +8697,14 @@ Contact us
   background: linear-gradient(to bottom, #f2f2f2 0%, rgba(252, 252, 252, 0) 2%);
 }
 
-.form_holder.contact-us .offices h1 {
+.contact-us .offices h1 {
   border-bottom: 1px solid #ddd;
   padding-bottom: 30px;
   margin-bottom: 0px;
   font-size: 30px;
 }
 
-.form_holder.contact-us .primary-contact, .our-values {
+.contact-us .primary-contact, .our-values {
   border-radius: 8px;
   background: #333;
   background: -moz-linear-gradient(top, #444 0%, #111 100%);
@@ -8712,17 +8721,17 @@ Contact us
   text-shadow: #000 0px 2px 0px;
 }
 
-.form_holder.contact-us .primary-contact .four {
+.contact-us .primary-contact .four {
   text-align: center;
   padding: 48px 0;
   border-left: 1px solid #444;
 }
 
-.form_holder.contact-us .four:first-of-type {
+.contact-us .four:first-of-type {
   border-left: none;
 }
 
-.form_holder.contact-us .page-holder, .form_holder.who-we-are .page-holder, .media-kit .page-holder, .who-we-are .page-holder {
+.contact-us .page-holder, .form_holder.who-we-are .page-holder, .media-kit .page-holder, .who-we-are .page-holder {
   border: none;
   padding: 18px 0px 8px 0px;
 }
@@ -8731,7 +8740,7 @@ Contact us
   font-size: 38px;
 }
 
-.form_holder.contact-us .page-holder .twelve {
+.contact-us .page-holder .twelve {
   text-align: center;
   padding: 48px 0 0 0;
 }
@@ -11177,13 +11186,13 @@ responsive.css
     /* needs forcing to overide height media queries*/
   }
 
-  .form_holder.contact-us .primary-contact, .our-values {
+  .contact-us .primary-contact, .our-values {
     border-radius: 0px;
     margin: 0;
     text-align: center;
   }
 
-  .form_holder.contact-us .primary-contact .four {
+  .contact-us .primary-contact .four {
     border: none;
     border-bottom: 1px solid #444;
     padding: 28px 0 28px 0;
@@ -11467,7 +11476,7 @@ html {
 }
 
 /* IF WE HAVE AUX LINKS IN MENU*/
-.bc_navbar .nav ul li.k-menu-faq, .bc_navbar .nav ul li.k-menu-terms, .bc_navbar .nav ul li.k-menu-cookies {
+.bc_navbar .nav ul li.k-menu-faq, .bc_navbar .nav ul li.k-menu-terms, .bc_navbar .nav ul li.k-menu-cookie {
   border-top: none;
 }
 
@@ -11476,22 +11485,22 @@ html {
   padding-top: 10px;
 }
 
-.bc_navbar .nav ul li.k-menu-cookies {
+.bc_navbar .nav ul li.k-menu-cookie {
   padding-bottom: 10px;
 }
 
-.bc_navbar .nav ul li.k-menu-faq a, .bc_navbar .nav ul li.k-menu-terms a, .bc_navbar .nav ul li.k-menu-cookies a {
+.bc_navbar .nav ul li.k-menu-faq a, .bc_navbar .nav ul li.k-menu-terms a, .bc_navbar .nav ul li.k-menu-cookie a {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.38);
   padding: 4px 8px 4px 14px;
 }
 
-.bc_navbar .nav ul li.k-menu-faq a:hover, .bc_navbar .nav ul li.k-menu-terms a:hover, .bc_navbar .nav ul li.k-menu-cookies a:hover {
+.bc_navbar .nav ul li.k-menu-faq a:hover, .bc_navbar .nav ul li.k-menu-terms a:hover, .bc_navbar .nav ul li.k-menu-cookie a:hover {
   background-color: transparent;
   color: #fff;
 }
 
-.bc_navbar .nav ul li.k-menu-faq a:before, .bc_navbar .nav ul li.k-menu-terms a:before, .bc_navbar .nav ul li.k-menu-cookies a:before {
+.bc_navbar .nav ul li.k-menu-faq a:before, .bc_navbar .nav ul li.k-menu-terms a:before, .bc_navbar .nav ul li.k-menu-cookie a:before {
   display: none;
 }
 
@@ -11577,12 +11586,26 @@ html {
   background-color: #010206;
 }
 
-.non-app.home-page #pagepiling section {
-  background-color: #010206;
-  /* remove when pagepiling works*/
+.non-app.home-page #fullpage.piling section {
   height: 100%;
   position: absolute;
   width: 100%;
+}
+
+/* --------------------------- */
+/* remove when pagepiling works*/
+/* --------------------------- */
+.non-app.home-page #fullpage section {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* --------------------------- */
+/* /remove when pagepiling works*/
+/* --------------------------- */
+.non-app.home-page #fullpage.full section {
+  position: relative;
 }
 
 .non-app.home-page .pp-section h2 {
@@ -11596,7 +11619,7 @@ html {
 .non-app.home-page h1, .non-app.k-blog-holder h1 {
   padding-right: 8px;
   font-size: 55px;
-  color: #fff;
+  /*color: #fff;*/
   color: #eac033;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 0px 4px;
   font: 55px "bclever_font_medium", tahoma, sans-serif;
@@ -11806,6 +11829,8 @@ p.home-page-intro {
   color: #fff;
   padding: 8px 38px 8px 12px;
   border-radius: 4px;
+  display: inline-block;
+  margin: 18px 0;
 }
 
 .more-link:hover {
@@ -11839,12 +11864,17 @@ p.home-page-intro {
 }
 
 .blog-nav {
-  background-color: rgba(0, 0, 0, 0.38);
+  /*background-color: rgba(0,0,0,0.38);
   padding: 18px;
   border-radius: 4px;
   position: relative;
   width: 100%;
   margin: 48px 0 18px 0;
+  hide until we have enough blogs for search and categories
+  */
+  opacity: 0;
+  margin-bottom: 8px;
+  pointer-events: none;
 }
 
 .blog-nav form {
@@ -11956,6 +11986,15 @@ p.home-page-intro {
 .post-content h3 {
   color: rgba(0, 0, 0, 0.8);
   font-size: 28px;
+}
+
+.non-app.k-blog-holder .widget_synved_social_share {
+  /* hide on homepage*/
+  display: none;
+}
+
+.single-post .non-app.k-blog-holder .widget_synved_social_share {
+  display: block;
 }
 
 /* comments */
@@ -12212,15 +12251,6 @@ p.home-page-intro {
 
   .blog-nav input[type="search"] {
     margin-top: 12px;
-  }
-
-  .widget_synved_social_share {
-    /* hide on homepage*/
-    display: none;
-  }
-
-  .single-post .widget_synved_social_share {
-    display: block;
   }
 
   .non-app.home-page h1, .non-app.k-blog-holder h1, .non-app.k-blog-holder h1 a {
