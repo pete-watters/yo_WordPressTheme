@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	var testimonialAddClass = function(classToAdd, timeout){
 		if(typeof timeout === "undefined"){ timeout = 0;}
@@ -78,34 +77,34 @@ $(document).ready(function(){
 		$('.bclever-modal').removeClass('bclever-modal-open');
 	});
 
+	// locale
+	$(".menu-primary-menu-container a, .entry-header a").click(function (e) {
 
+		e.preventDefault();
+		var addressValue = $(this).attr("href");
+		var localeValue = location.search.split('locale=').splice(1).join('').split('&')[0];
 
-	<!-- demo - go to url after delay -->
-	$('.action_goTo-how-it-works').click(function(e){
-
-		$('html').removeClass('bc_page_loaded').addClass('bc_page_loading');
-
-		var t = function (e) {
-			window.location.href = 'https://kontainers.co.uk/howitworks';
-			//If you wanted to change the page without it reflecting in the browser back history
-			//window.location.replace('...');
-			e.preventDefault();
+		if(localeValue === "gb"){
+			window.location.href = addressValue + "?locale=" + localeValue;
 		}
-		setTimeout(t, 2888);
+		else{
+			window.location.href = addressValue;
+		}
 	});
+
 
 	<!-- demo - go to url after delay -->
 	$('.action_goToApp').click(function(e){
 		$('html').removeClass('bc_page_loaded').addClass('bc_page_loading');
 
-			var localeValue = location.search.split('locale=').splice(1).join('').split('&')[0];
-			if(localeValue != "gb"){
-				localeValue = "us"
-			}
-			window.location.href = 'https://kontainers.io/?locale=' + localeValue+ '&quotePanel=true';
-			//var url = 'https://kontainers.io/?locale=' + localeValue+ '&quotePanel=true';
-			//var win = window.open(url, '_blank');
-			//win.focus();
+		var localeValue = location.search.split('locale=').splice(1).join('').split('&')[0];
+		if(localeValue != "gb"){
+			localeValue = "us"
+		}
+		window.location.href = 'https://kontainers.io/?locale=' + localeValue+ '&quotePanel=true';
+		//var url = 'https://kontainers.io/?locale=' + localeValue+ '&quotePanel=true';
+		//var win = window.open(url, '_blank');
+		//win.focus();
 
 	});
 	$('.k-menu-quotes a').click(function(e){
@@ -117,6 +116,10 @@ $(document).ready(function(){
 
 	<!-- hamburger button animate to close-->
 	$('#nav-toggle').click(function(e){
+		$('#nav-toggle').toggleClass('close-icon');
+		$('.bc_navbar').toggleClass('open-nav');
+	});
+	$("#menu").focusout(function(){
 		$('#nav-toggle').toggleClass('close-icon');
 		$('.bc_navbar').toggleClass('open-nav');
 	});

@@ -35,8 +35,6 @@
 	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
 	<link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon" />
 	<title><?php wp_title( ); ?></title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicons/favicon.ico">
 
 	<?php wp_head(); ?>
