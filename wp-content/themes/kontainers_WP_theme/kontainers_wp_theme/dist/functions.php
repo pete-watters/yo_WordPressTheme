@@ -1,7 +1,7 @@
 <?php
 
-update_option('siteurl','https://home.kontainers.com');
-update_option('home','https://home.kontainers.com');
+update_option('siteurl','https://kontainers.com');
+update_option('home','https://kontainers.com');
 /**
  * kontainers_WP_theme functions file
  *
@@ -46,11 +46,20 @@ Scripts and Styles
 function kontainers_wp_theme_enqueue_scripts() {
 	# the 1.0 here is adding version = 1.0
 
+
+	// wp_register_script( 'easing', get_stylesheet_directory_uri() . '/assets/js/easing.js', array('jquery'), '', true);
+	// wp_register_script( 'slimscroll', get_stylesheet_directory_uri() . '/assets/js/slimscroll.min.js', array('jquery'), '', true);
+	// wp_register_script( 'fullpage', get_stylesheet_directory_uri() . '/assets/js/fullpage.min.js', array('jquery'), '', true);
+	// wp_register_script( 'my-script', get_stylesheet_directory_uri() . '/assets/js/script.js', array( 'jquery', 'easing', 'slimscroll', 'fullpage' ), '', true);
+	// wp_enqueue_script( 'my-script' );
+
 	wp_enqueue_style( 'kontainers_wp_theme-styles', get_stylesheet_uri() , array(), '1.0' );
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+	wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
 	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), '1.0', true );
+	wp_enqueue_script( 'jquery-fullpage', get_template_directory_uri() . '/js/jquery.fullpage.js', array('jquery'), '1.0', true );
+	wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery' , 'jquery-fullpage'), '1.0', true );
+	wp_enqueue_script('default-scripts');
 	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 }
 add_action( 'wp_enqueue_scripts', 'kontainers_wp_theme_enqueue_scripts' );

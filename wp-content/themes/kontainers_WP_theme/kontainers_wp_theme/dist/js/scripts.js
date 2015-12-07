@@ -134,4 +134,8 @@ $(document).ready(function(){
             document.getElementById('video-holder').innerHTML = '';
         }, setTimeout(t, 888)
     });
+
+    <!-- instantiate fullpage -->
+    // $('#fullpage').fullpage({ anchors: ['Kontainers', 'TheFuture', 'Benefits', 'InstantQuotes'], menu: '#menu', scrollingSpeed:2188 });
+
 });
