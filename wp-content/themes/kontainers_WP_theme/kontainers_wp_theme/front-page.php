@@ -10,6 +10,17 @@
 		<!--  Top bar with nav -->
 		<?php include('top-nav.php') ?>
 
+		<!-- instantiate fullpage -->
+	<!-- <script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery('#fullpage').fullpage({
+				anchors: ['Kontainers', 'TheFuture', 'Benefits', 'InstantQuotes'],
+				menu: '#menu',
+				scrollingSpeed:2188
+			});
+
+		});
+	</script> -->
 
 		<!--  Piled content - homepage slides transitioned by scroll-->
 		<div id="fullpage">

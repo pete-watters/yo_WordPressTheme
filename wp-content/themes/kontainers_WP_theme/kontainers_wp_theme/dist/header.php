@@ -38,18 +38,6 @@
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicons/favicon.ico">
 
 	<?php wp_head(); ?>
-
-	<!-- instantiate fullpage -->
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#fullpage').fullpage({
-			anchors: ['Kontainers', 'TheFuture', 'Benefits', 'InstantQuotes'],
-			menu: '#menu',
-			scrollingSpeed:2188
-		});
-
-	});
-</script>
 </head>
 <!--END HEAD -->
 

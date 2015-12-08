@@ -50,11 +50,42 @@ function kontainers_wp_theme_enqueue_scripts() {
 	wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
 	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'jquery-fullpage', get_template_directory_uri() . '/js/jquery.fullpage.js', array('jquery'), '1.2', true );
-	wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery' , 'jquery-fullpage'), '1.0', true );
+	wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '1.0', true );
 	wp_enqueue_script('default-scripts');
 	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 }
 add_action( 'wp_enqueue_scripts', 'kontainers_wp_theme_enqueue_scripts' );
+
+
+// function register_fullpage() {
+//     wp_register_script( 'fullPage-js', get_template_directory_uri() . '/js/jquery.fullPage.js' , array( 'jquery' ) );
+//     if (is_front_page()){
+//          wp_enqueue_script( 'fullPage-js' );
+//     }
+// }
+// add_action( 'wp_enqueue_scripts', 'register_fullpage' );
+
+function print_my_inline_script() {
+       if ( wp_script_is( 'fullPage-js', 'done' ) ) { ?>
+				 <script type="text/javascript">
+				 jQuery(function($) {
+						 $(document).ready(function() {
+							 $('#fullpage').fullpage({
+								 anchors: ['Kontainers', 'TheFuture', 'Benefits', 'InstantQuotes'],
+								 menu: '#menu',
+								 scrollingSpeed:2188
+							 });
+
+						 });
+				 });
+
+				 </script>
+     <?php }
+}
+add_action( 'wp_footer', 'print_my_inline_script' );
+
+
+
 
 
 /******************************************************************************\
