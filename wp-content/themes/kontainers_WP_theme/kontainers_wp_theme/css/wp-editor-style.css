@@ -940,8 +940,7 @@ Errors - Move to errors.css
     transform: scale3d(1, 1, 1);
   }
 }
-span.help-indicator, .resultsRow.makeCentered h1.quotes-heading span.help-indicator, .resultsRow h1 span.help-indicator,
-.lcl-heading span.help-indicator {
+span.help-indicator, .resultsRow.makeCentered h1.quotes-heading span.help-indicator, .resultsRow h1 span.help-indicator, .lcl-heading span.help-indicator {
   opacity: 0;
   border: 3px solid #f3bf00;
   border-radius: 88px;
@@ -976,9 +975,42 @@ span.help-indicator, .resultsRow.makeCentered h1.quotes-heading span.help-indica
     border: 1px solid #f3bf00;
   }
 }
-@-moz-keyframes pulse_animation {}
-@-ms-keyframes pulse_animation {}
-@-o-keyframes pulse_animation {}
+@-moz-keyframes pulse_animation {
+  0% {
+    -webkit-transform: scale(0.6);
+    opacity: .5;
+    border: 3px solid #f3bf00;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    opacity: 0;
+    border: 1px solid #f3bf00;
+  }
+}
+@-ms-keyframes pulse_animation {
+  0% {
+    -webkit-transform: scale(0.6);
+    opacity: .5;
+    border: 3px solid #f3bf00;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    opacity: 0;
+    border: 1px solid #f3bf00;
+  }
+}
+@-o-keyframes pulse_animation {
+  0% {
+    -webkit-transform: scale(0.6);
+    opacity: .5;
+    border: 3px solid #f3bf00;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    opacity: 0;
+    border: 1px solid #f3bf00;
+  }
+}
 /*  bclever.css
 
 Contains:
@@ -12101,7 +12133,7 @@ responsive.css
   .darkPanel.quote_panel .btn-help {
     position: fixed;
     right: 10px;
-    margin: -65px 0px 0 0px;
+    margin: -118px 0px 0 0px;
   }
 }
 /* -------------------------------------------------------------------------------------------- */
@@ -12109,10 +12141,10 @@ responsive.css
 /* -------------------------------------------------------------------------------------------- */
 @media (max-height: 680px) {
   .flipper-panel {
-    margin-top: -20px;
+    margin-top: 30px;
   }
 }
-@media screen and (min-width: 1024px) and (max-height: 640px) {
+@media screen and (min-width: 1024px) and (max-height: 680px) {
   .partner-logos, .quote-animator {
     display: none;
   }
@@ -12399,22 +12431,6 @@ html {
   width: 100%;
 }
 
-/* --------------------------- */
-/* remove when pagepiling works*/
-/* --------------------------- */
-.non-app.home-page #fullpage section {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-
-/* --------------------------- */
-/* /remove when pagepiling works*/
-/* --------------------------- */
-.non-app.home-page #fullpage.full section {
-  position: relative;
-}
-
 .non-app.home-page .pp-section h2 {
   text-align: left;
   padding-left: 18px;
@@ -12464,7 +12480,7 @@ html {
 p.home-page-intro {
   text-align: center;
   color: #fff;
-  padding: 8px 118px 38px 118px;
+  padding: 8px 28px 38px 28px;
   font: 23px "bclever_font_light", tahoma, sans-serif;
   text-shadow: rgba(0, 0, 0, 0.8) 0px 0px 6px;
 }
@@ -12481,8 +12497,6 @@ p.home-page-intro {
 /* Page Pileing */
 .pp-section {
   height: 100%;
-             /*position: absolute;
-width: 100%;*/
 }
 
 #pagepiling .pp-section {
@@ -12709,15 +12723,13 @@ width: 100%;*/
 }
 
 .blog-nav {
-  	/*background-color: rgba(0,0,0,0.38);
-  	padding: 18px;
-  	border-radius: 4px;
-  	position: relative;
-  	width: 100%;
-  	margin: 48px 0 18px 0;
-  	hide until we have enough blogs for search and categories
-  
-  	*/
+  /*background-color: rgba(0,0,0,0.38);
+  padding: 18px;
+  border-radius: 4px;
+  position: relative;
+  width: 100%;
+  margin: 48px 0 18px 0;
+  hide until we have enough blogs for search and categories*/
   opacity: 0;
   margin-bottom: 8px;
   pointer-events: none;
@@ -13149,7 +13161,11 @@ h3.sub-heading {
 
   .entry-header {
     display: block;
-    position: a;
+    height: auto;
+  }
+
+  h3.mobile-sub-heading {
+    display: block;
   }
 
   .non-app.k-blog-holder .post img.attachment-post-thumbnail {
