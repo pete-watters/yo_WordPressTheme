@@ -23,7 +23,7 @@ get_header();
 
 			<!--  conent_holder - positions content -->
 			<div class="content_holder">
-				<h1> <a href="<?php echo get_page_link() ?>">Shipping Blog</a></h1>
+				<h1> <a href="<?php echo get_page_link() ?>">Blog</a></h1>
 				<!--  blog-nav - holds navigation elements scraped from standard WP elements -->
 				<?php include('blog-nav.php'); ?>
 				<?php

@@ -1139,7 +1139,7 @@ p.home-page-intro, .non-app.home-page .section-2 p {
 .home-page-start .content_holder, .non-app .section-2 .content_holder {
 	top: calc(50% - 168px);
 }
-.btn_start, .affiliation {
+.btn_start, .affiliation, .pp-section.section-2 .home-image {
 	display: none;
 }
 .home-page-start .btn_start {
@@ -1228,7 +1228,7 @@ p.home-page-intro, .non-app.home-page .section-2 p {
 	display: block;
 	width: 100%;
 	text-align: center;
-	max-width: 430px;
+	/*max-width: 430px;*/
 	margin: 0 auto;
 }
 .section-4 .actions-panel p {
@@ -1238,7 +1238,7 @@ p.home-page-intro, .non-app.home-page .section-2 p {
 	font-size: 30px;
 }
 .non-app .section .content_holder, .contact-us-holder {
-	max-width: 460px;
+	/*max-width: 460px;*/
 	-moz-transform: translate(0px, 0%);
 	-o-transform: translate(0px, 0%);
 	-webkit-transform: translate(0px, 0%);

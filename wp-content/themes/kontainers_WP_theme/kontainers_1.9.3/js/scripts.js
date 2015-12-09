@@ -104,13 +104,27 @@ $(document).ready(function(){
     );
 
     <!-- hamburger button animate to close-->
-    $('#nav-toggle').click(function(e){
-      alert("CLICK");
-              e.preventDefault();
-        $('#nav-toggle').toggleClass('close-icon');
-        $('.bc_navbar').toggleClass('open-nav');
-    });
+    // $('#nav-toggle').click(function(e){
+    //     consle.log("CLICK");
+    //     $('#nav-toggle').toggleClass('close-icon');
+    //     $('.bc_navbar').toggleClass('open-nav');
+    // });
+    <!-- hamburger button animate to close-->
+    $('.bc_navbar').click(function(e){
 
+/*      if($('.bc_navbar').hasClass('open-nav')){
+                $('#nav-toggle').removeClass('close-icon');
+                $('.bc_navbar').removeClass('open-nav');
+        }else{
+                $('#nav-toggle').addClass('close-icon');
+                $('.bc_navbar').addClass('open-nav');
+        } */
+
+                //$('#nav-toggle').removeClass('close-icon');
+                //$('.bc_navbar').removeClass('open-nav');
+                $('#nav-toggle').addClass('close-icon');
+                $('.bc_navbar').addClass('open-nav');
+    });
     $( ".widget_recent_entries , .widget_categories" ).on({
         click: function() {
             <!-- blog - show recent posts list-->
