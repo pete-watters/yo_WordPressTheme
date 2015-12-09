@@ -49,7 +49,6 @@ function kontainers_wp_theme_enqueue_scripts() {
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
 	wp_enqueue_script('jquery');
-	//wp_enqueue_script( 'jquery-fullpage', get_template_directory_uri() . '/js/jquery.fullpage.js', array('jquery'), '1.2', true );
 	wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '1.0', true );
 	wp_enqueue_script('default-scripts');
 	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
